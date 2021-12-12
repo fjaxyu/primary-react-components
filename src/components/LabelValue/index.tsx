@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-import {Paragraph, Label, Link, Show, Text, Box} from '@waveortho/simple-components';
-
-import Placeholder from './Placeholder';
+import Box from './../Box';
+import Label from './../Label';
+import Link from './../Link';
+import Paragraph from './../Paragraph';
+import Placeholder from './../Placeholder';
 
 const CONSTANTS = {
     VALID_SIZES: ['sm']

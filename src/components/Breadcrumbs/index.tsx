@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-
-import * as SimpleComponents from '@waveortho/simple-components';
-const {BreadcrumbContainer, BreadcrumbItem, Badge, BreadcrumbSeparator} = SimpleComponents;
+import BreadcrumbContainer from './../BreadcrumbContainer';
+import BreadcrumbSeparator from './../BreadcrumbSeparator';
+import BreadcrumbItem from './../BreadcrumbItem';
 
 import {TypeService} from '@waveortho/services';
 

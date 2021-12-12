@@ -12,7 +12,7 @@ export type FormGroupProps = {
 
 
 
-const Index = (props: FormGroupProps) => {
+export default function FormGroup(props: FormGroupProps) {
     const classNames = getClassNames(props);
 
     return (
@@ -21,7 +21,6 @@ const Index = (props: FormGroupProps) => {
         </div>
     );
 };
-export default Index;
 
 
 

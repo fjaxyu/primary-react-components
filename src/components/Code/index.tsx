@@ -16,8 +16,7 @@ export default function Index(props: CodeProps) {
     const classNames = getClassNames(props);
 
     return (
-        <code
-              className={classNames}
+        <code className={classNames}
               style={props.style}
               ref={props.innerRef}>
             {props.children}

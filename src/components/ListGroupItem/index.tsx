@@ -1,9 +1,10 @@
 import * as React from 'react';
 
-import ListItem from './ListItem';
-import Badge from './Badge';
-import Button from './Button';
-import {TypeService} from '@waveortho/services';
+import ListItem from './../ListItem';
+import Badge from './../Badge';
+import Button from './../Button';
+
+import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

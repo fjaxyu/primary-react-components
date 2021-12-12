@@ -1,6 +1,8 @@
 import * as React from 'react';
+
 import {ForwardedRef, Ref} from 'react';
-import {TypeService} from '@waveortho/services';
+
+import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import Image from './Image';
-import {TypeService} from '@waveortho/services';
+import Image from './../Image';
+import {TypeService} from './../../services';
 
 const CONSTANTS = {
     VALID_POSITIONS: {

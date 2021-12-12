@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import SimpleComponents from '@waveortho/simple-components';
-const {Box} = SimpleComponents;
+import Box from './../Box';
 
-import IconLinkCard, {IconCardLinkProps} from './IconLinkCard';
+import IconLinkCard, {IconCardLinkProps} from './../IconLinkCard';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

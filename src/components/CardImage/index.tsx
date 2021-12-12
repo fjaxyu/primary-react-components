@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Image from './Image';
+import Image from './../Image';
 
 const CONSTANTS = {
     VALID_POSITIONS: ['top', 'bottom', 'both'],

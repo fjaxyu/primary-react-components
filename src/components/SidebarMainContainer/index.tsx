@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import {Container} from '@waveortho/simple-components';
-import {ContainerProps} from '@waveortho/simple-components/dist/src/Container';
+import Container, {ContainerProps} from './../Container';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

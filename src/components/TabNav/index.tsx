@@ -1,7 +1,10 @@
 import * as React from 'react';
 
-import {Box, Link, Text} from '@waveortho/simple-components';
-import {TypeService, UtilityService} from '@waveortho/services';
+import Box from './../Box';
+import Link from './../Link';
+import Text from './../Text';
+
+import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

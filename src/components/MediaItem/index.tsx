@@ -1,7 +1,9 @@
 import * as React from 'react';
 
 
-import {Media, MediaBody, MediaImage} from '@waveortho/simple-components';
+import Media from './../Media';
+import MediaBody from './../MediaBody';
+import MediaImage from './../MediaImage';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

@@ -26,7 +26,7 @@ const CONSTANTS = {
 
 
 
-function Index(props: HeaderProps) {
+export default function Header(props: HeaderProps) {
     const textTitle = props.children;
     const HeaderTag = getHeaderSize(props);
     const classNames = getClassNames(props, HeaderTag);
@@ -37,7 +37,6 @@ function Index(props: HeaderProps) {
         </HeaderTag>
     );
 }
-export default Index;
 
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//

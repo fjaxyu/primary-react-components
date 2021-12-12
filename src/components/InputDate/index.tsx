@@ -9,7 +9,8 @@ export type InputDateProps = {
     className?: string,
     style?: React.CSSProperties,
 
-    innerRef?: React.LegacyRef<HTMLInputElement>,
+    // innerRef?: React.LegacyRef<HTMLInputElement>,
+    innerRef?: any,
 
     //When the input changes, this function will be called
     onChange?: (value) => void,

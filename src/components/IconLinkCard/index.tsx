@@ -1,9 +1,10 @@
 import * as React from 'react';
 
-import SimpleComponents from '@waveortho/simple-components';
-const {Card, CardBody, Icon, CardFooter, Paragraph} = SimpleComponents;
-
-import {IconProps} from '@waveortho/simple-components/dist/src/Icon';
+import Card from './../Card';
+import CardBody from './../CardBody';
+import Icon, {IconProps} from './../Icon';
+import CardFooter from './../CardFooter';
+import Paragraph from './../Paragraph';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

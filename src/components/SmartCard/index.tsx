@@ -1,9 +1,15 @@
 import * as React from 'react';
 
-import {Card, CardFooter, CardHeader, Link, CardIcon, CardImage, CardBody} from '@waveortho/simple-components';
-import {TypeService} from '@waveortho/services';
+import Card, {CardProps} from './../Card';
+import CardFooter from './../CardFooter';
+import CardHeader from './../CardHeader';
+import Link from './../Link';
+import CardIcon from './../CardIcon';
+import CardImage from './../CardImage';
+import CardBody from './../CardBody';
 
-import {CardProps} from '@waveortho/simple-components/dist/src/Card';
+import {TypeService} from './../../services';
+
 import {SizeProp} from '@fortawesome/fontawesome-svg-core';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//

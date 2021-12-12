@@ -1,8 +1,7 @@
 import * as React from 'react';
-import {ForwardedRef, Ref} from 'react';
 
 import TextareaAutosize from 'react-textarea-autosize';
-import {TypeService} from '@waveortho/services';
+import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

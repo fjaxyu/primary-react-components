@@ -1,11 +1,12 @@
 import * as React from 'react';
 
 
-import {Progress, ProgressBar} from '@waveortho/simple-components';
+import ProgressBarContainer from './../ProgressBarContainer';
+import ProgressBarProgress from './../ProgressBarProgress';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export type ProgressBarContainerProps = {
+export type ProgressBarProps = {
     height: number,
     value: number,
 
@@ -20,14 +21,14 @@ export type ProgressBarContainerProps = {
 }
 
 
-export default function ProgressBarContainer(props: ProgressBarContainerProps) {
+export default function ProgressBar(props: ProgressBarProps) {
     return (
-        <Progress height={props.height} className={props.className} style={props.style}>
-            <ProgressBar value={props.value}
-                         color={props.color}
-                         type={props.type}
-                         animated={props.animated}
-                         striped={props.striped} showLabel={props.showLabel}/>
-        </Progress>
+        <ProgressBarContainer height={props.height} className={props.className} style={props.style}>
+            <ProgressBarProgress value={props.value}
+                                 color={props.color}
+                                 type={props.type}
+                                 animated={props.animated}
+                                 striped={props.striped} showLabel={props.showLabel}/>
+        </ProgressBarContainer>
     );
 }

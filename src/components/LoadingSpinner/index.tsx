@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Image} from '@waveortho/simple-components';
+import Image from './../Image';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

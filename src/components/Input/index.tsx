@@ -1,26 +1,22 @@
 import * as React from 'react';
 
 
-import {
-    InputText,
-    InputSelect,
-    InputNumber,
-    InputDate,
-    InputCheckbox,
-    Label,
-    InputRadio,
-    TextArea,
-    TextAreaAutoresize,
-    Required,
-    FormGroup,
-    Paragraph,
-    Show,
-    Text
-} from '@waveortho/simple-components';
+import InputText from './../InputText';
+import InputSelect, {Option as InputSelectOption} from './../InputSelect';
+import InputNumber from './../InputNumber';
+import InputDate from './../InputDate';
+import InputCheckbox from './../InputCheckbox';
+import Label from './../Label';
+import InputRadio, {Option as InputRadioOption} from './../InputRadio';
+import InputTextArea from './../InputTextArea';
+import InputTextAreaAutoresize from './../InputTextAreaAutoresize';
+import Required from './../Required';
+import FormGroup from './../FormGroup';
+import Paragraph from './../Paragraph';
+import Show from './../Show';
+import Text from './../Text';
 
-import {Option as InputSelectOption} from '@waveortho/simple-components/dist/src/InputSelect';
-import {Option as InputRadioOption} from '@waveortho/simple-components/dist/src/InputRadio';
-import {UtilityService} from '@waveortho/services';
+import {UtilityService} from './../../services';
 
 const MODULE_CONSTANTS = {
     TYPE_MAP: {
@@ -203,7 +199,7 @@ export default React.forwardRef(function Input(props: InputProps, ref) {
                             options={props.options as InputRadioOption[]}/>
             );
         } else if (mappedType === 'textarea') {
-            let ComponentName = (props.autoresize === true) ? TextAreaAutoresize : TextArea;
+            let ComponentName = (props.autoresize === true) ? InputTextAreaAutoresize : InputTextArea;
 
             return (
                 <ComponentName onChange={props.onChange}

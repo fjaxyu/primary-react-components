@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import Image from './Image';
-import Icon from './Icon';
-import Box from './Box';
+import Image from './../Image';
+import Icon from './../Icon';
+import Box from './../Box';
+
 import {SizeProp} from '@fortawesome/fontawesome-svg-core';
 
 const CONSTANTS = {
