@@ -2,16 +2,70 @@
   "name": "primary-react-components",
   "version": "1.0.0",
   "description": "A react component library targeting Bootstrap with the intention to simplify and standardize the interaction with components",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd playground && npm start",
+    "test": "npm run test-components",
+    "test-components": "mocha tests/components/*Test.js --require @babel/register",
+    "build": "webpack --display-modules",
+    "build-patch-publish": "npm run build && npm version patch && npm publish",
+    "prepublishOnly": "npm run test"
   },
   "keywords": [
     "react",
     "bootstrap",
     "components",
+    "jsx",
     "css"
   ],
+  "peerDependencies": {
+    "moment": "^2.26.0",
+    "react": "^16.14.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@waveortho/services": "^1.4.39",
+    "@waveortho/type-service": "^1.0.1",
+    "moment": "^2.26.0",
+    "node-fetch": "^2.6.0",
+    "react-textarea-autosize": "8.1.1",
+    "unfetch": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.7",
+    "@babel/register": "^7.8.3",
+    "@babel/runtime": "^7.9.6",
+    "@types/prop-types": "^15.7.3",
+    "@types/react": "^17.0.16",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "circular-dependency-plugin": "^5.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "eslint-plugin-react": "^7.24.0",
+    "jsdom-global": "^3.0.2",
+    "path": "^0.12.7",
+    "react": "^16.14.0",
+    "react-dom": "16.14",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
   "author": "Wesley Braithwaite",
   "license": "MIT"
 }
