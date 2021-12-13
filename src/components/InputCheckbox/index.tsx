@@ -59,7 +59,8 @@ export default function Index(props: InputCheckboxProps) {
 
 function getClasses(props) {
     const classNames = [
-        'form-control'
+        'form-control',
+        'checkbox'
     ];
 
     if (props.className) {

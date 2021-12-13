@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-import Media from './../Media';
+import MediaContainer from './../MediaContainer';
 import MediaBody from './../MediaBody';
 import MediaImage from './../MediaImage';
 
@@ -23,10 +23,10 @@ export default function Index(props: MediaItemProps) {
     const {className, style, border, borderBottom, src, position, children} = props;
 
     return (
-        <Media className={className}
-               style={style}
-               border={border}
-               borderBottom={borderBottom}>
+        <MediaContainer className={className}
+                        style={style}
+                        border={border}
+                        borderBottom={borderBottom}>
 
             <MediaImage src={src}
                         position={position}/>
@@ -34,6 +34,6 @@ export default function Index(props: MediaItemProps) {
             <MediaBody>
                 {children}
             </MediaBody>
-        </Media>
+        </MediaContainer>
     );
 };
