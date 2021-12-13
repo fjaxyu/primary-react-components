@@ -5,7 +5,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 import SimpleComponentTester from './../../services/SimpleComponentTester';
 
-import {Alert} from './../../dist/index';
+import Alert from './index';
 
 configure({adapter: new Adapter()});
 
