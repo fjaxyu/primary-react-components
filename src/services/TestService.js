@@ -1,6 +1,6 @@
 const {JSDOM} = require('jsdom');
 
-const {TypeService} = require('@waveortho/services');
+const TypeService = require('./TypeService');
 
 //--==--==----==--==--==--==----==--==----==--==----==--==--==--==----==--==--//
 //PUBLIC METHODS

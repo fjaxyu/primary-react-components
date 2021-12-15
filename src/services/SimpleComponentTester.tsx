@@ -6,7 +6,7 @@ import ReactDOMServer from 'react-dom/server';
 import {shallow, mount} from 'enzyme/build';
 import {expect} from 'chai';
 
-const {TypeService} = require('@waveortho/services');
+const TypeService = require('./TypeService');
 const TestService = require('./TestService');
 
 const TEST_CONSTANTS = {

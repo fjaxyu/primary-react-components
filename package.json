@@ -27,8 +27,6 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
-    "@waveortho/services": "^1.4.39",
-    "@waveortho/type-service": "^1.0.1",
     "moment": "^2.26.0",
     "node-fetch": "^2.6.0",
     "react-textarea-autosize": "8.1.1",

@@ -4,7 +4,7 @@ import BreadcrumbContainer from './../BreadcrumbContainer';
 import BreadcrumbSeparator from './../BreadcrumbSeparator';
 import BreadcrumbItem from './../BreadcrumbItem';
 
-import {TypeService} from '@waveortho/services';
+import {TypeService} from './../../services';
 
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
