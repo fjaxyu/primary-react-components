@@ -1,5 +1,7 @@
 demo
 tests
+src
 .babelrc
+.mocharc.json
 webpack.config.js
 .gitignore
