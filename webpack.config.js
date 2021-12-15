@@ -20,7 +20,11 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				include: path.resolve(__dirname, 'src'),
-				exclude: /(node_modules|build|dist|spec\.ts?$)/,
+				// exclude: /(node_modules|build|dist|spec\.ts?$)/,
+				exclude: [
+					/(node_modules|build|dist)/,
+					/\.spec\.tsx/
+				],
 				use: 'ts-loader'
 			},
 			{

@@ -14,12 +14,12 @@ import UtilityService from './UtilityService';
 export {UtilityService};
 
 
-import SimpleComponentTester from './SimpleComponentTester';
-export {SimpleComponentTester};
-
-
-import TestService from './TestService';
-export {TestService};
+// import SimpleComponentTester from './SimpleComponentTester';
+// export {SimpleComponentTester};
+//
+//
+// import TestService from './TestService';
+// export {TestService};
 
 
 
@@ -27,7 +27,5 @@ export default {
     HttpService,
     RouteService,
     TypeService,
-    UtilityService,
-    SimpleComponentTester,
-    TestService,
+    UtilityService
 };

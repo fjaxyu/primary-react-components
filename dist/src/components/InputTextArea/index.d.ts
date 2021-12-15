@@ -1,0 +1,31 @@
+import * as React from 'react';
+import { Ref } from 'react';
+export declare type TextAreaProps = {
+    className?: string | Array<string>;
+    style?: React.CSSProperties;
+    children?: React.ReactNode;
+    focus?: boolean;
+    onChange?: (string: any, TextAreaProps: any, { value, event, props }: {
+        value: any;
+        event: any;
+        props: any;
+    }) => void;
+    onCommandEnter?: (Record: any) => void;
+    onEnter?: (Record: any) => void;
+    ref?: Ref<any>;
+    hasError?: boolean;
+    disabled?: boolean;
+    autocomplete?: string;
+    autosize?: boolean;
+    placeholder?: string;
+    value?: string;
+    rows?: number;
+    textCenter?: boolean;
+    mode?: 'plain' | string;
+    maxRows?: number;
+    minRows?: number;
+    onHeightChange?: (height: any) => void;
+    cacheMeasurements?: boolean;
+};
+declare const _default: React.ForwardRefExoticComponent<Pick<TextAreaProps, "style" | "className" | "children" | "focus" | "mode" | "onChange" | "value" | "onEnter" | "onCommandEnter" | "autocomplete" | "disabled" | "placeholder" | "textCenter" | "rows" | "maxRows" | "minRows" | "onHeightChange" | "cacheMeasurements" | "hasError" | "autosize"> & React.RefAttributes<any>>;
+export default _default;
