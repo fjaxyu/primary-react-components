@@ -1,8 +1,13 @@
 const path = require('path');
+
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
+//==---=---=---=--=-=--===---====--===---=---=---=--=-=--===---====--=-===---=---=---=--=-=--===---====--=//
+
+
+
 module.exports = {
-	entry: path.resolve(__dirname, 'index.ts'),
+	entry: path.resolve(__dirname, 'index.tsx'),
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'index.js',
@@ -14,7 +19,8 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				exclude: /(node_modules|build|dist)/,
+				include: path.resolve(__dirname, 'src'),
+				exclude: /(node_modules|build|dist|spec\.ts?$)/,
 				use: 'ts-loader'
 			},
 			{
@@ -46,10 +52,6 @@ module.exports = {
 		'react-dom': {
 			commonjs: 'react-dom',
 			commonjs2: 'react-dom',
-		},
-		'react-datepicker': {
-			commonjs: 'react-datepicker',
-			commonjs2: 'react-datepicker',
 		},
 		'node-fetch': 'node-fetch',
 		'unfetch': 'unfetch',
