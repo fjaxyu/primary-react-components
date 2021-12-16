@@ -15,7 +15,7 @@ export declare function getUserAgent(req: any): any;
  * @param {String} endpoint
  * @returns {Boolean}
  */
-export declare function isSecureEndpoint(endpoint: any): boolean;
+export declare function isSecureEndpoint(endpoint: any): any;
 declare const _default: {
     getIpAddress: typeof getIpAddress;
     getUserAgent: typeof getUserAgent;

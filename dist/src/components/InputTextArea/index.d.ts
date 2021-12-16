@@ -27,5 +27,5 @@ export declare type TextAreaProps = {
     onHeightChange?: (height: any) => void;
     cacheMeasurements?: boolean;
 };
-declare const _default: React.ForwardRefExoticComponent<Pick<TextAreaProps, "style" | "className" | "children" | "focus" | "mode" | "onChange" | "value" | "onEnter" | "onCommandEnter" | "autocomplete" | "disabled" | "placeholder" | "textCenter" | "rows" | "maxRows" | "minRows" | "onHeightChange" | "cacheMeasurements" | "hasError" | "autosize"> & React.RefAttributes<any>>;
+declare const _default: React.ForwardRefExoticComponent<Pick<TextAreaProps, "style" | "children" | "className" | "focus" | "disabled" | "textCenter" | "mode" | "onChange" | "value" | "onEnter" | "onCommandEnter" | "autocomplete" | "placeholder" | "rows" | "maxRows" | "minRows" | "onHeightChange" | "cacheMeasurements" | "hasError" | "autosize"> & React.RefAttributes<any>>;
 export default _default;

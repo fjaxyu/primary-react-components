@@ -135,7 +135,7 @@ export declare function _valueToString(value: any, options?: {
  * @returns {Boolean}
  * @private
  */
-export declare function _isReactComponent(component: any): boolean;
+export declare function _isReactComponent(component: any): any;
 export declare function _showDescription(value: any, cb: any): void;
 /**
  *

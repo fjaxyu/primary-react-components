@@ -34,5 +34,5 @@ declare type InputProps = {
     label?: string;
     labelSize?: string;
 };
-declare const _default: React.ForwardRefExoticComponent<Pick<InputProps, "label" | "style" | "className" | "focus" | "name" | "type" | "mode" | "onChange" | "options" | "value" | "onEnter" | "onCommandEnter" | "autocomplete" | "required" | "disabled" | "inputStyle" | "labelStyle" | "placeholder" | "helpMessage" | "errorMessage" | "textCenter" | "rows" | "showMessageLength" | "maxMessageLength" | "autoresize" | "maxRows" | "minRows" | "onHeightChange" | "cacheMeasurements" | "labelSize"> & React.RefAttributes<unknown>>;
+declare const _default: React.ForwardRefExoticComponent<Pick<InputProps, "label" | "style" | "className" | "focus" | "disabled" | "textCenter" | "name" | "type" | "mode" | "onChange" | "options" | "value" | "onEnter" | "onCommandEnter" | "autocomplete" | "required" | "inputStyle" | "labelStyle" | "placeholder" | "helpMessage" | "errorMessage" | "rows" | "showMessageLength" | "maxMessageLength" | "autoresize" | "maxRows" | "minRows" | "onHeightChange" | "cacheMeasurements" | "labelSize"> & React.RefAttributes<unknown>>;
 export default _default;
