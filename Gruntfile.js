@@ -1,11 +1,11 @@
 const outputFileMap = {
     css: {
-        standard: './dist/css/modern-theme.css',
-        standard_min: './dist/css/modern-theme.min.css'
+        standard: './dist/css/theme.css',
+        standard_min: './dist/css/theme.min.css'
     },
     scss: {
-        standard: './dist/scss/modern-theme.scss',
-        standard_min: './dist/scss/modern-theme.min.scss',
+        standard: './dist/scss/theme.scss',
+        standard_min: './dist/scss/theme.min.scss',
         _config: './dist/scss/_config.scss',
         _config_min: './dist/scss/_config.min.scss'
     }
