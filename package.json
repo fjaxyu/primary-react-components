@@ -1,7 +1,7 @@
 {
     "name": "primary-react-components",
     "version": "1.0.0",
-    "description": "A react component library targeting Bootstrap with the intention to simplify and standardize the interaction with components",
+    "description": "A Typescript React-JSX component and CSS/SCSS library targeting Bootstrap with the intention to simplify and standardize the interaction with components",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {
