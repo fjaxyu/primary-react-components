@@ -32,6 +32,3 @@ import 'primary-react-components/dist/css/theme.css';
 ```ecmascript 6
 import {Paragraph, Container} from 'primary-react-components'
 ```
-
-## Components
-
