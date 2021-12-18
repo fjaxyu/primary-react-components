@@ -35,3 +35,4 @@ import {Paragraph, Container} from 'primary-react-components'
 
 ## Components
 
+{{components}}

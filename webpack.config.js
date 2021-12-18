@@ -20,7 +20,6 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				include: path.resolve(__dirname, 'src'),
-				// exclude: /(node_modules|build|dist|spec\.ts?$)/,
 				exclude: [
 					/(node_modules|build|dist)/,
 					/\.spec\.tsx/
@@ -55,11 +54,11 @@ module.exports = {
 		},
 		'react-dom': {
 			commonjs: 'react-dom',
-			commonjs2: 'react-dom',
+			commonjs2: 'react-dom'
 		},
 		'node-fetch': 'node-fetch',
 		'unfetch': 'unfetch',
 		'moment': 'moment',
-		'react-textarea-autosize': 'react-textarea-autosize',
+		'react-textarea-autosize': 'react-textarea-autosize'
 	}
 };

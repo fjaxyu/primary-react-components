@@ -5,13 +5,13 @@
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "start": "cd playground && npm start",
         "test": "npm run test-components",
         "test-components": "ts-mocha -p tsconfig.json src/components/**/*.spec.tsx",
         "build": "npm run build-theme && npm run build-components",
         "build-components": "webpack --display-modules",
         "build-theme": "grunt",
         "build-patch-publish": "npm run build && npm version patch && npm publish",
+        "generate-readme": "ts-node resources/readmeGenerator.js",
         "prepublishOnly": "npm run test"
     },
     "keywords": [
@@ -32,6 +32,7 @@
         "@fortawesome/react-fontawesome": "^0.1.9",
         "moment": "^2.26.0",
         "node-fetch": "^2.6.0",
+        "primary-services": "^1.0.10",
         "react-textarea-autosize": "8.1.1",
         "unfetch": "^4.1.0"
     },
@@ -58,6 +59,7 @@
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.3",
         "babel-loader": "^8.0.6",
+        "babel-plugin-add-module-exports": "^1.0.4",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
         "babel-preset-env": "^1.7.0",
