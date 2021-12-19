@@ -73,7 +73,8 @@ async function generateReadmeComponentContent(componentNameList): Promise<string
             let contentList = [
                 header,
                 READMEFileContents,
-                typeFileContents
+                typeFileContents,
+                '---'
             ].filter((value) => !!value);
 
             let sectionContent = contentList.map((content) => content.trim()).join('\r\n\r\n');
