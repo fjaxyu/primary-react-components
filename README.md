@@ -41,6 +41,34 @@ import {Paragraph, Container} from 'primary-react-components'
 
 ### Box
 
+The box is a simple wrapper of the div element
+
+#### Usage
+
+```jsx
+<Box style={{padding: '3px', background: 'tomato'}}>
+    Your content here
+</Box>
+```
+
+![image](/src/components/Box/images/example.png)
+
+#### Types
+```typescript
+export type BoxProps = {
+    className?: string | Array<string>,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    shadow?: boolean | 1 | 2 | 3 | 4 | 5,
+    title?: string,
+    onClick?: () => void,
+    onMouseOver?: any,
+    onMouseEnter?: any,
+    onMouseLeave?: any,
+    id?: string
+}
+```
+
 ### BreadcrumbContainer
 
 ### BreadcrumbItem

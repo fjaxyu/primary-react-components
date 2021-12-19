@@ -11,7 +11,7 @@
         "build-components": "webpack --display-modules",
         "build-theme": "grunt",
         "build-patch-publish": "npm run build && npm version patch && npm publish",
-        "generate-readme": "ts-node resources/readmeGenerator.js",
+        "generate-readme": "ts-node resources/readmeGenerator.tsx",
         "prepublishOnly": "npm run test"
     },
     "keywords": [
