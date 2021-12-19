@@ -8,4 +8,12 @@ The standard [Bootstrap Alert](https://getbootstrap.com/docs/5.1/components/aler
 </Alert>
 ```
 
+The hideIfEmpty attribute can be used to easily hide the alert if the contents are empty, for example if you're displaying an error message
+
+```jsx
+<Alert type={'error'} hideIfEmpty={true}>
+    {errorMessage}
+</Alert>
+```
+
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

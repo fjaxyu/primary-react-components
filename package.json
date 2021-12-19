@@ -7,6 +7,7 @@
     "scripts": {
         "test": "npm run test-components",
         "test-components": "ts-mocha -p tsconfig.json src/components/**/*.spec.tsx",
+        "test-docs": "ts-mocha tests/docs/*.test.js",
         "build": "npm run build-theme && npm run build-components",
         "build-components": "webpack --display-modules",
         "build-theme": "grunt",
@@ -44,6 +45,7 @@
         "@babel/plugin-transform-runtime": "^7.9.6",
         "@babel/preset-env": "^7.8.7",
         "@babel/preset-react": "^7.8.7",
+        "@babel/preset-typescript": "^7.16.5",
         "@babel/register": "^7.8.3",
         "@babel/runtime": "^7.9.6",
         "@fortawesome/fontawesome-svg-core": "^1.2.29",
@@ -69,6 +71,7 @@
         "enzyme-adapter-react-16": "^1.15.6",
         "eslint-plugin-mocha": "^7.0.0",
         "eslint-plugin-react": "^7.24.0",
+        "expect": "^27.4.2",
         "grunt": "^1.0.4",
         "grunt-contrib-clean": "^2.0.0",
         "grunt-contrib-concat": "^1.0.1",

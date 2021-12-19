@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {ModalShouldBeClosedContext} from './../support/ModalShouldBeClosedContext';
+import {ModalShouldBeClosedContext} from './../../support/ModalShouldBeClosedContext';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
