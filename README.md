@@ -1,7 +1,9 @@
 # primary-react-components
 
 A Typescript React-JSX component and CSS/SCSS library targeting Bootstrap with the intention to simplify and standardize the
-interaction with components
+interaction with components.
+
+The documentation for this repository is still being worked-on, but it should be functional and ready to use! Check out the types in each of the components for details on how to use the components.
 
 ## Getting Started
 
@@ -34,6 +36,18 @@ import {Paragraph, Container} from 'primary-react-components'
 ```
 
 ## Components
+
+Each of the following components will all generally have the following attributes to use:
+
+```typescript
+//Adding your own custom class names to the component 
+type className = string | string[];
+
+//Adding your own custom styles to the components
+type style = React.CSSProperties;
+```
+
+Some of the components (button, badge, alerts) will also feature additional colors to those found in bootstrap: Purple, Pink, and Orange
 
 ### Alert
 
