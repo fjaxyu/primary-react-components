@@ -1,21 +1,13 @@
 import * as React from 'react';
 
 import {FontAwesomeIcon, FontAwesomeIconProps} from '@fortawesome/react-fontawesome';
-import {SizeProp} from '@fortawesome/fontawesome-svg-core';
+
+import {IconProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export type  IconProps = FontAwesomeIconProps & {
-    icon: string,
-    size?: SizeProp,
 
-    className?: string,
-    style?: React.CSSProperties,
-    noPosition?: boolean,
-}
-
-
-export default function Index(props: IconProps) {
+export default function Icon(props: IconProps) {
     let itemProps = {...props, icon: props.icon};
 
     itemProps.className = (typeof itemProps.className === 'string') ? itemProps.className : '';

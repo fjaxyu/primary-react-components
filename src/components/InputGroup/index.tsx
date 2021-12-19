@@ -1,14 +1,8 @@
 import * as React from 'react';
 
+import {InputGroupProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type InputGroupProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
 
 export default function Index(props: InputGroupProps) {
     const classNames = getClassNames(props);

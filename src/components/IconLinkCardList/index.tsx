@@ -2,15 +2,11 @@ import * as React from 'react';
 
 import Box from './../Box';
 
-import IconLinkCard, {IconCardLinkProps} from './../IconLinkCard';
+import IconLinkCard from './../IconLinkCard';
+import {IconLinkCardListProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-
-export type IconLinkCardListProps = {
-    options: IconCardLinkProps[],
-    align?: 'left' | 'center' | 'right'
-};
 
 
 export default function Index(props: IconLinkCardListProps) {

@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {ContainerProps} from './types';
+
 const CONSTANTS = {
     VALID_SIZES: {
         'sm': 'sm',
@@ -11,20 +13,6 @@ const CONSTANTS = {
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-
-const TS_VALID_SIZES = [...Object.keys(CONSTANTS.VALID_SIZES)] as const;
-
-export type ContainerProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    id?: string,
-    size?: typeof TS_VALID_SIZES | string,
-    centerContent?: boolean,
-    inline?: boolean,
-    flex?: boolean,
-    mode?: 'sidebar'
-}
 
 export default React.forwardRef(function (props: ContainerProps, ref) {
     const classNames = getClassNames(props);

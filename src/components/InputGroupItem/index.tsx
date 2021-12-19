@@ -7,17 +7,11 @@ const CONSTANTS = {
     ]
 };
 
+import {InputGroupItemProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export type InputGroupItemProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-    type?: 'prepend' | 'append'
-}
-
-export default function Index(props: InputGroupItemProps) {
+export default function InputGroupItem(props: InputGroupItemProps) {
     const classNames = getClassNames(props);
 
     return (

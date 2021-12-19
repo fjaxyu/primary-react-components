@@ -1,8 +1,10 @@
 import * as React from 'react'
 
+import {InputGroupTextProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-const Index = (props: InputGroupTextProps) => {
+export default function InputGroupText(props: InputGroupTextProps) {
     const classNames = getClassNames(props);
     
     return (
@@ -11,19 +13,6 @@ const Index = (props: InputGroupTextProps) => {
         </div>
     );
 };
-export default Index;
-
-
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PROPS
-
-export type InputGroupTextProps = {
-    className: string,
-    style?: React.CSSProperties,
-    innerRef?: any,
-    children: React.ReactNode
-};
-
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 //PRIVATE METHODS

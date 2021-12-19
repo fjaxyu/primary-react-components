@@ -2,30 +2,18 @@ import * as React from 'react';
 
 import Card from './../Card';
 import CardBody from './../CardBody';
-import Icon, {IconProps} from './../Icon';
+
+import Icon from './../Icon';
+
 import CardFooter from './../CardFooter';
 import Paragraph from './../Paragraph';
+
+import {IconLinkCardProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
-export type IconCardLinkProps = {
-    onClick: () => void,
-    icon: IconProps['icon'],
-    backgroundColor: string,
-    text: string,
-    className?: string,
-    iconColor?: IconProps['color'],
-    iconStyle?: IconProps['style'],
-    iconSize?: IconProps['size'],
-    style?: React.CSSProperties,
-    iconContainerStyle?: React.CSSProperties,
-    textContainerStyle?: React.CSSProperties,
-    textStyle?: React.CSSProperties,
-};
-
-
-export default function Index(props: IconCardLinkProps) {
+export default function IconLinkCard(props: IconLinkCardProps) {
     let {
         onClick,
         icon,

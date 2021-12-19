@@ -1,13 +1,8 @@
 import * as React from 'react';
 
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
+import {ClearProps} from './types';
 
-export type ClearProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
+//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 export default function Index(props: ClearProps) {
     const classNames = getClassNames(props);

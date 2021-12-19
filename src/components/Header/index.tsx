@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import {HeaderProps} from './types';
+
 const CONSTANTS = {
     VALID_SIZES: {
         'large': 'h1',
@@ -24,8 +26,6 @@ const CONSTANTS = {
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-
-
 export default function Header(props: HeaderProps) {
     const textTitle = props.children;
     const HeaderTag = getHeaderSize(props);
@@ -36,25 +36,6 @@ export default function Header(props: HeaderProps) {
             {textTitle}
         </HeaderTag>
     );
-}
-
-
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PROPS
-
-const TS_VALID_SIZES = [...Object.keys(CONSTANTS.VALID_SIZES)] as const;
-
-export type HeaderProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    size?: string,
-    id?: string,
-    innerRef?: any,
-    textCenter?: boolean,
-    noTopPadding?: boolean,
-    bold?: boolean,
-    italic?: boolean
 }
 
 

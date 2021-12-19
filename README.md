@@ -488,7 +488,12 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type ClearProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -507,7 +512,12 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type CodeProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+};
 ```
 
 ---
@@ -526,7 +536,17 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type ContainerProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    id?: string,
+    size?: 'sm' | 'small' | 'lg' | 'large' | string,
+    centerContent?: boolean,
+    inline?: boolean,
+    flex?: boolean,
+    mode?: 'sidebar'
+}
 ```
 
 ---
@@ -545,7 +565,13 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type FormProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    onSubmit?: (FormProps, any) => void
+}
 ```
 
 ---
@@ -564,7 +590,13 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type FormGroupProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    mode?: 'plain'
+}
 ```
 
 ---
@@ -583,7 +615,27 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type HeaderProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    size?: (
+        'extra-extra-extra-small' | 'xxxs' |
+        'extra-extra-small' | 'xxs' |
+        'extra-small' | 'xs' |
+        'small' | 'sm' |
+        'medium' | 'md' | 'default' |
+        'large' | 'lg' |
+        'extra-large' | 'xl' |
+        'xxl' | 'extra-extra-large'
+        ),
+    id?: string,
+    innerRef?: any,
+    textCenter?: boolean,
+    noTopPadding?: boolean,
+    bold?: boolean,
+    italic?: boolean
+}
 ```
 
 ---
@@ -602,7 +654,13 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type IconProps = FontAwesomeIconProps & {
+    icon: string,
+    size?: SizeProp,
+    className?: string,
+    style?: React.CSSProperties,
+    noPosition?: boolean,
+}
 ```
 
 ---
@@ -621,7 +679,20 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type IconLinkCardProps = {
+    onClick: () => void,
+    icon: IconProps['icon'],
+    backgroundColor: string,
+    text: string,
+    className?: string,
+    iconColor?: IconProps['color'],
+    iconStyle?: IconProps['style'],
+    iconSize?: IconProps['size'],
+    style?: React.CSSProperties,
+    iconContainerStyle?: React.CSSProperties,
+    textContainerStyle?: React.CSSProperties,
+    textStyle?: React.CSSProperties,
+};
 ```
 
 ---
@@ -640,7 +711,10 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type IconLinkCardListProps = {
+    options: IconLinkCardProps[],
+    align?: 'left' | 'center' | 'right'
+};
 ```
 
 ---
@@ -659,7 +733,17 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type ImageProps = {
+    src: string,
+    alt?: string,
+    className?: string,
+    style?: React.CSSProperties,
+    id?: string,
+    title?: string,
+    innerRef?: any,
+    onClick?: () => void,
+    clickHover?: boolean
+};
 ```
 
 ---
@@ -678,7 +762,12 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type InlineSeparatorProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -697,7 +786,39 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type InputProps = {
+    onChange: (value: string) => void,
+    type: string,
+    value: string | number | Date | boolean,
+    options?: InputSelectOption[] | InputRadioOption[],
+    onEnter?: (value: string) => void,
+    onCommandEnter?: (value: string) => void,
+    autocomplete?: string,
+    required?: boolean,
+    disabled?: boolean,
+    focus?: boolean,
+    name?: string,
+    style?: React.CSSProperties,
+    inputStyle?: React.CSSProperties,
+    labelStyle?: React.CSSProperties,
+    className?: string,
+    mode?: 'plain',
+    ref: any,
+    placeholder?: string,
+    helpMessage?: string,
+    errorMessage?: string,
+    textCenter?: boolean,
+    rows?: number,
+    showMessageLength?: boolean,
+    maxMessageLength?: number,
+    autoresize?: boolean,
+    maxRows?: number,
+    minRows?: number,
+    onHeightChange?: (height) => void,
+    cacheMeasurements?: boolean,
+    label?: string,
+    labelSize?: string,
+}
 ```
 
 ---
@@ -716,7 +837,25 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type InputCheckboxProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    //When the input changes, this function will be called
+    onChange: (string, InputCheckboxProps, {value, event, props}) => void,
+    //The value of the input
+    value?: boolean,
+    //The placeholder for the element
+    placeholder?: string,
+    //disables the input and prevents the user from entering any information
+    disabled?: boolean,
+    //Adds some error stylings to the input
+    hasError?: boolean,
+    //center the text inside the input
+    textCenter?: boolean,
+    focus?: boolean,
+    innerRef?: any
+};
 ```
 
 ---
@@ -735,7 +874,27 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type InputDateProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    // innerRef?: React.LegacyRef<HTMLInputElement>,
+    innerRef?: any,
+    //When the input changes, this function will be called
+    onChange?: (value) => void,
+    //The value of the input
+    value?: Date,
+    autocomplete?: string,
+    //If true, this will set the focus automatically when the input is loaded
+    focus?: boolean,
+    //The placeholder for the element
+    placeholder?: string,
+    //disables the input and prevents the user from entering any information
+    disabled?: boolean,
+    //Adds some error stylings to the input
+    hasError?: boolean,
+    //center the text inside the input
+    textCenter?: boolean
+};
 ```
 
 ---
@@ -754,7 +913,12 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type InputGroupProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -773,7 +937,13 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type InputGroupItemProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    type?: 'prepend' | 'append'
+}
 ```
 
 ---
@@ -792,7 +962,12 @@ export type CardIconProps = {
 
 #### Types
 ```typescript
-
+export type InputGroupTextProps = {
+    className: string,
+    style?: React.CSSProperties,
+    innerRef?: any,
+    children: React.ReactNode
+};
 ```
 
 ---

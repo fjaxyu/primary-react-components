@@ -1,16 +1,10 @@
 import * as React from 'react';
 
+import {InlineSeparatorProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export type InlineSeparatorProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
-
-export default function Index(props: InlineSeparatorProps) {
+export default function InlineSeparator(props: InlineSeparatorProps) {
     const classNames = getClassNames(props);
 
     return (

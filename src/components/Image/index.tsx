@@ -1,20 +1,8 @@
 import * as React from 'react'
 
+import {ImageProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type ImageProps = {
-    src: string,
-
-    alt?: string,
-    className?: string,
-    style?: React.CSSProperties,
-    id?: string,
-    title?: string,
-    innerRef?: any,
-    onClick?: () => void,
-    clickHover?: boolean
-};
-
 
 const Index = (props: ImageProps) => {
     const classNames = getClassNames(props);
