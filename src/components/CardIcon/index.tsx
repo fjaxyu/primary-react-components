@@ -4,7 +4,7 @@ import Image from './../Image';
 import Icon from './../Icon';
 import Box from './../Box';
 
-import {SizeProp} from '@fortawesome/fontawesome-svg-core';
+import {CardIconProps} from './types';
 
 const CONSTANTS = {
     VALID_POSITIONS: ['top', 'bottom', 'both'],
@@ -12,21 +12,6 @@ const CONSTANTS = {
 };
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type CardIconProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    background?: string,
-    position?: 'top' | 'bottom' | 'both',
-    noPosition?: boolean,
-    size?: SizeProp,
-    color?: string,
-    src?: string,
-    alt?: string,
-    icon: string
-}
-
 
 
 export default function Index(props: CardIconProps) {

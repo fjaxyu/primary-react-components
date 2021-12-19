@@ -6,23 +6,11 @@ import BreadcrumbItem from './../BreadcrumbItem';
 
 import {TypeService} from './../../services';
 
+import {BreadcrumbsProps, BreadcrumbItemProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export type BreadcrumbsProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    items: BreadcrumbItem[],
-    onUrlChange: (url: string) => void
-};
-
-
-export type BreadcrumbItem = {
-    name: string,
-    url: string
-}
-
-export default function Index(props: BreadcrumbsProps) {
+export default function Breadcrumbs(props: BreadcrumbsProps) {
     const children = generateChildren(props);
 
     return (

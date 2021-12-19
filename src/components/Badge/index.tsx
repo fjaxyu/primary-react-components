@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {BadgeProps} from './types';
+
 const CONSTANTS = {
     VALID_TYPES: {
         'primary': 'primary',
@@ -32,24 +34,9 @@ const CONSTANTS = {
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-const VALID_TYPE_ENTRIES = [...Object.keys(CONSTANTS.VALID_TYPES)] as const;
-const VALID_SIZE_ENTRIES = [...Object.keys(CONSTANTS.VALID_SIZES)] as const;
-
-export type BadgeProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    pill?: boolean,
-    innerRef?: any,
-    title?: string,
-    color?: string,
-    type?: (typeof VALID_TYPE_ENTRIES)[number],
-    size?: (typeof VALID_SIZE_ENTRIES)[number]
-}
 
 
-
-export default function Index(props: BadgeProps) {
+export default function Badge(props: BadgeProps) {
     const classNames = getClassNames(props);
 
     return (

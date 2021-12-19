@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {ButtonProps} from './types';
+
 const CONSTANTS = {
     VALID_BUTTON_TYPES: [
         'button',
@@ -33,31 +35,6 @@ const CONSTANTS = {
 };
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-const TS_VALID_TYPES = [...Object.keys(CONSTANTS.VALID_TYPES)] as const;
-const TS_VALID_SIZES = [...Object.keys(CONSTANTS.VALID_SIZES)] as const;
-const TS_VALID_BUTTON_TYPES = [...Object.keys(CONSTANTS.VALID_BUTTON_TYPES)] as const;
-
-export type ButtonProps = {
-    onClick?: (ButtonProps, any) => void,
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-    id?: string,
-    buttonType?: 'button' | 'submit',
-    noDefaultType?: boolean,
-    block?: boolean,
-    outline?: boolean,
-    title?: string,
-    size?: 'xs' | 'sm' | 'md' | 'lg',
-    type?: (
-        'primary' | 'blue' | 'secondary' | 'success' | 'green' | 'danger' | 'red' | 'error' |
-        'warning' | 'yellow' | 'orange' | 'purple' | 'pink' | 'light' | 'default' | 'dark' | 'link'
-        ),
-    disabled?: boolean
-};
-
 
 
 export default function Index(props: ButtonProps) {

@@ -1,17 +1,8 @@
 import * as React from 'react';
 
+import {CardFooterProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-
-export type CardFooterProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
-
-
 
 export default function Index(props: CardFooterProps) {
     const classNames = getClassNames(props);

@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {AlertProps} from './types';
+
 const CONSTANTS = {
     VALID_TYPES: {
         'primary': 'primary',
@@ -37,17 +39,8 @@ export default function Alert(props: AlertProps) {
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 //PROPS
 
-const VALID_TYPE_ENTRIES = [...Object.keys(CONSTANTS.VALID_TYPES)] as const;
-const DEFAULT_TYPE = 'primary';
 
-export type AlertProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-    hideIfEmpty?: boolean,
-    type?: (typeof VALID_TYPE_ENTRIES)[number]
-}
+const DEFAULT_TYPE = 'primary';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 //PRIVATE METHODS

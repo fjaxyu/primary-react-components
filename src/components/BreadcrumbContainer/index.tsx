@@ -1,15 +1,9 @@
 import * as React from 'react';
 
+import {BreadcrumbContainerProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-
-export type BreadcrumbContainerProps = {
-    className?: string,
-    innerRef?: any,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    withBackground?: boolean
-}
 
 export default function Index(props: BreadcrumbContainerProps) {
     const classNames = getClassNames(props);

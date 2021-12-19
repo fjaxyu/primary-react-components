@@ -1,20 +1,12 @@
 import * as React from 'react';
 
+import {BreadcrumbSeparatorProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
 
-export type BreadcrumbSeparatorProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-    separator?: string
-}
-
-
-
-export default function Index(props: BreadcrumbSeparatorProps) {
+export default function BreadcrumbSeparator(props: BreadcrumbSeparatorProps) {
     const classNames = getClassNames(props);
     const separator = getSeparator(props);
 

@@ -2,16 +2,9 @@ import * as React from 'react';
 
 import Link from './../Link';
 
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
+import {BreadcrumbItemProps} from './types';
 
-export type BreadcrumbItemProps = {
-    onClick?: () => void,
-    href: () => void,
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    active?: boolean
-}
+//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 export default function Index(props: BreadcrumbItemProps) {
     const classNames = getClassNames(props);

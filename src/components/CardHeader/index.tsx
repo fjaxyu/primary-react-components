@@ -2,16 +2,9 @@ import * as React from 'react';
 
 import Box from './../Box';
 
+import {CardHeaderProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type CardHeaderProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any
-}
-
 
 
 export default function Index(props: CardHeaderProps) {

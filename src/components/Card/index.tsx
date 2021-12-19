@@ -1,17 +1,8 @@
 import * as React from 'react';
 
+import {CardProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type CardProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    isClickable?: boolean,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-    shadow?: 1 | 2 | 3 | 4 | 5,
-    onClick?: () => void
-}
 
 
 
@@ -20,14 +11,14 @@ export default function Index(props: CardProps) {
 
     return (
         <div
-             className={classNames}
-             style={props.style}
-             ref={props.innerRef}
-             onClick={() => {
-                 if (props.onClick) {
-                     props.onClick();
-                 }
-             }}>
+            className={classNames}
+            style={props.style}
+            ref={props.innerRef}
+            onClick={() => {
+                if (props.onClick) {
+                    props.onClick();
+                }
+            }}>
             {props.children}
         </div>
     );
