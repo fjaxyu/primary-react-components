@@ -61,6 +61,14 @@ The standard [Bootstrap Alert](https://getbootstrap.com/docs/5.1/components/aler
 </Alert>
 ```
 
+The hideIfEmpty attribute can be used to easily hide the alert if the contents are empty, for example if you're displaying an error message
+
+```jsx
+<Alert type={'error'} hideIfEmpty={true}>
+    {errorMessage}
+</Alert>
+```
+
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
@@ -91,15 +99,19 @@ export type AlertProps = {
 
 ### Badge
 
-[DESCRIPTION]
+The standard [Bootstrap Badge](https://getbootstrap.com/docs/5.1/components/badge/), with a few additional colors: orange, purple, and pink
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Badge color={'purple'}>{messageCount}</Badge>
 ```
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+Includes the pill version
+
+```jsx
+<Badge color={'orange'} type={'pill'}>{status}</Badge>
+```
 
 #### Types
 ```typescript
@@ -167,15 +179,15 @@ export type BoxProps = {
 
 ### BreadcrumbContainer
 
-[DESCRIPTION]
+#### NOTICE
+
+This component, the container, is used to make up a smarter component: "Breadcrumbs", which automatically generates the values and container in one. Use the Breadcrumbs component instead of this, unless you need some custom functionality beyond the smarter component.
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Breadcrumb>...</Breadcrumb>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -192,15 +204,23 @@ export type BreadcrumbContainerProps = {
 
 ### BreadcrumbItem
 
-[DESCRIPTION]
+#### NOTICE
+
+This component, the breadcrumb-item, is used to make up a smarter component: "Breadcrumbs", which automatically
+generates the values and container in one. Use the Breadcrumbs component instead of this, unless you need some custom
+functionality beyond the smarter component.
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<BreadcrumbItem onClick={() => navigate('/dashboard')}>Dashboard</BreadcrumbItem>
 ```
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+The breadcrumb item's onclick will be disabled when active is set to true, even if onclick is present
+
+```jsx
+<BreadcrumbItem onClick={() => navigate('/dashboard')} active={true}>Products</BreadcrumbItem>
+```
 
 #### Types
 ```typescript
@@ -218,12 +238,23 @@ export type BreadcrumbItemProps = {
 
 ### Breadcrumbs
 
-[DESCRIPTION]
+The Breadcrumbs is a smart component that uses others to generate
+the [Bootstrap Breadcrumbs](https://getbootstrap.com/docs/5.1/components/breadcrumb/).
 
 #### Usage
 
+The last item in the array of items will be automatically marked as "active" and disabled
+
 ```jsx
-[DETAILS]
+<Breadcrumbs items={[
+                {name: 'Dashboard', url: '/dashboard'},
+                {name: 'Shows', url: '/shows'},
+                {name: 'Seasons', url: '/seasons?show=the_office'},
+                {name: 'Episodes', url: '/seasons?show=the_office&season=1'},
+                {name: 'Episode 1: Pilot', url: '/seasons?show=the_office&season=1&episode=1'},
+             ]} 
+             onUrlChange={(url) => navigate(url)}
+             separator={'|'}/>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -233,8 +264,10 @@ export type BreadcrumbItemProps = {
 export type BreadcrumbsProps = {
     className?: string,
     style?: React.CSSProperties,
+    withBackground?: boolean,
     items: BreadcrumbItemProps[],
-    onUrlChange: (url: string) => void
+    onUrlChange: (url: string) => void,
+    separator?: string
 };
 export type BreadcrumbItemProps = {
     name: string,
@@ -246,15 +279,17 @@ export type BreadcrumbItemProps = {
 
 ### BreadcrumbSeparator
 
-[DESCRIPTION]
+#### NOTICE
+
+This component, the breadcrumb-item-separator, is used to make up a smarter component: "Breadcrumbs", which automatically
+generates the values and container in one. Use the Breadcrumbs component instead of this, unless you need some custom
+functionality beyond the smarter component.
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<BreadcrumbSeparator>|</BreadcrumbSeparator>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -271,12 +306,49 @@ export type BreadcrumbSeparatorProps = {
 
 ### Button
 
-[DESCRIPTION]
+The standard [Bootstrap Button](https://getbootstrap.com/docs/5.1/components/buttons/) with a few additional colors:
+Orange, Purple, and Pink'
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Button onClick={() => showProductModalDetails()}>Show Details</Button>
+```
+
+Set the button to be displayed as a block
+
+```jsx
+<Button block onClick={() => showProductModalDetails()}>Show Details</Button>
+<Button block={true} onClick={() => showProductModalDetails()}>Show Details</Button>
+```
+
+Get the outlined version of the button
+
+```jsx
+<Button outline type={'error'} onClick={() => deleteProduct()}>Delete</Button>
+<Button outline={true} type={'error'} onClick={() => deleteProduct()}>Delete</Button>
+```
+
+Quickly and easily switch the displayed mode based on a status, outlining if inactive
+
+```jsx
+<Button outline={selectedStatus !== 'hold'} onClick={() => setStatus('hold')}>On Hold</Button>
+<Button outline={selectedStatus !== 'available'} onClick={() => setStatus('available')}>Available</Button>
+```
+
+Easily disable buttons in a form
+
+```jsx
+<Button disabled={formIsDisabled} onClick={() => submitForm()}>Submit</Button>
+```
+
+If the button is inside of a Form element and the Form element has an onSubmit, you can set buttonType to "submit" and the form's onSubmit method will be called instead. This method generally lets you utilize the enter-key on inputs to submit the form as well.
+
+```jsx
+<Form onSubmit={() => submitForm()}>
+    ...
+    <Button buttonType={'submit'}>Submit</Button>
+</Form>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -316,12 +388,15 @@ export type ButtonProps = {
 
 ### ButtonGroup
 
-[DESCRIPTION]
+The [Bootstrap Button Group](https://getbootstrap.com/docs/5.1/components/button-group/)
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<ButtonGroup>
+	<Button outline={selectedStatus !== 'hold'} onClick={() => setStatus('hold')}>On Hold</Button>
+	<Button outline={selectedStatus !== 'available'} onClick={() => setStatus('available')}>Available</Button>
+</ButtonGroup>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -341,12 +416,24 @@ export type ButtonGroupProps = {
 
 ### Card
 
-[DESCRIPTION]
+The [Bootstrap Card](https://getbootstrap.com/docs/5.1/components/card/) container
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Card>
+	<CardHeader>
+		{name}
+	</CardHeader>
+
+	<CardBody>
+		{details}
+	</CardBody>
+    
+	<CardFooter>
+		<Button onClick={() => save()}>Save</Button>
+	</CardFooter>
+</Card>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -368,12 +455,24 @@ export type CardProps = {
 
 ### CardBody
 
-[DESCRIPTION]
+The [Bootstrap Card](https://getbootstrap.com/docs/5.1/components/card/) body container
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Card>
+	<CardHeader>
+		{name}
+	</CardHeader>
+
+	<CardBody>
+		{details}
+	</CardBody>
+    
+	<CardFooter>
+		<Button onClick={() => save()}>Save</Button>
+	</CardFooter>
+</Card>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -392,12 +491,24 @@ export type CardBodyProps = {
 
 ### CardFooter
 
-[DESCRIPTION]
+The [Bootstrap Card](https://getbootstrap.com/docs/5.1/components/card/) footer container
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Card>
+	<CardHeader>
+		{name}
+	</CardHeader>
+
+	<CardBody>
+		{details}
+	</CardBody>
+    
+	<CardFooter>
+		<Button onClick={() => save()}>Save</Button>
+	</CardFooter>
+</Card>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -416,12 +527,24 @@ export type CardFooterProps = {
 
 ### CardHeader
 
-[DESCRIPTION]
+The [Bootstrap Card](https://getbootstrap.com/docs/5.1/components/card/) header container. This is not an h* tag, but a div wrapping the header content inside the card.
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Card>
+	<CardHeader>
+            <Header size={'sm'}>{name}</Header>
+	</CardHeader>
+
+	<CardBody>
+		{details}
+	</CardBody>
+    
+	<CardFooter>
+		<Button onClick={() => save()}>Save</Button>
+	</CardFooter>
+</Card>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -440,12 +563,22 @@ export type CardHeaderProps = {
 
 ### CardIcon
 
-[DESCRIPTION]
+The [Bootstrap Card](https://getbootstrap.com/docs/5.1/components/card/) image with a built-in font-awesome icon
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Card>
+	<CardIcon icon={'users'} background={'tomato'}/>
+
+	<CardBody>
+		{details}
+	</CardBody>
+    
+	<CardFooter>
+		<Button onClick={() => save()}>Save</Button>
+	</CardFooter>
+</Card>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -471,13 +604,25 @@ export type CardIconProps = {
 
 ### CardImage
 
-[DESCRIPTION]
+The [Bootstrap Card](https://getbootstrap.com/docs/5.1/components/card/) image
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Card>
+	<CardImage src={'/assets/images/mountains.png'} position={'top'}/>
+
+	<CardBody>
+		{details}
+	</CardBody>
+    
+	<CardFooter>
+		<Button onClick={() => save()}>Save</Button>
+	</CardFooter>
+</Card>
 ```
+
+The position is important to include, 'top', 'middle', 'bottom' and will default to 'top'. Use noPosition if it's important to not include the position details.
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
@@ -490,12 +635,12 @@ export type CardIconProps = {
 
 ### Clear
 
-[DESCRIPTION]
+A utility component that inserts a div with a "clear" class, which has a css property "clear: both"
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Clear/>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -514,12 +659,14 @@ export type ClearProps = {
 
 ### Code
 
-[DESCRIPTION]
+A wrapper for displaying pre-formatted code
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Code>
+    &amp;lt&semi;p&amp;gt&semi;Sample text here...&amp;lt&semi;/p&amp;gt&semi;
+</Code>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -538,12 +685,28 @@ export type CodeProps = {
 
 ### Container
 
-[DESCRIPTION]
+The [Bootstrap Container](https://getbootstrap.com/docs/5.1/layout/containers/)
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Container>
+    ...
+</Container>
+```
+
+```jsx
+<Container size={'sm'}>
+    ...
+</Container>
+```
+
+Use the flex attribute to make the container fit to the full-width
+
+```jsx
+<Container flex>
+    ...
+</Container>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
