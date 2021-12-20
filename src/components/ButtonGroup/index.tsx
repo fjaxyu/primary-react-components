@@ -6,7 +6,7 @@ import {ButtonGroupProps} from './types';
 
 
 
-export default function Index(props: ButtonGroupProps) {
+export default function ButtonGroup(props: ButtonGroupProps) {
     const classNames = getClassNames(props);
 
     return (

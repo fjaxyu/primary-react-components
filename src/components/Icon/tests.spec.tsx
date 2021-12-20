@@ -20,18 +20,18 @@ configure({adapter: new Adapter()});
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 describe('Icon', () => {
-    
+
     const config = {
         Component: Icon,
         ComponentName: 'Icon',
         tag: 'svg',
         defaultClasses: []
     };
-    
+
     SimpleComponentTester.testTag(config, {props: {icon: 'users'}});
     SimpleComponentTester.testChildren(config, false, {props: {icon: 'users'}});
     SimpleComponentTester.testClassName(config, {noClass: true});
     // SimpleComponentTester.testStyle(config, {props: {icon: 'users'}});
     SimpleComponentTester.testDefaultClasses(config);
-    
+
 });

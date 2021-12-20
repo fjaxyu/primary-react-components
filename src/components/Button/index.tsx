@@ -37,7 +37,7 @@ const CONSTANTS = {
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
-export default function Index(props: ButtonProps) {
+export default function Button(props: ButtonProps) {
     const classNames = getClassNames(props);
     const buttonType = getButtonType(props);
 

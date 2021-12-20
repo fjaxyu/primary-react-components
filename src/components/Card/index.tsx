@@ -6,19 +6,18 @@ import {CardProps} from './types';
 
 
 
-export default function Index(props: CardProps) {
+export default function Card(props: CardProps) {
     const classNames = getClassNames(props);
 
     return (
-        <div
-            className={classNames}
-            style={props.style}
-            ref={props.innerRef}
-            onClick={() => {
-                if (props.onClick) {
-                    props.onClick();
-                }
-            }}>
+        <div className={classNames}
+             style={props.style}
+             ref={props.innerRef}
+             onClick={() => {
+                 if (props.onClick) {
+                     props.onClick();
+                 }
+             }}>
             {props.children}
         </div>
     );

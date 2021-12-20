@@ -6,7 +6,7 @@ import BreadcrumbItem from './../BreadcrumbItem';
 
 import {TypeService} from './../../services';
 
-import {BreadcrumbsProps, BreadcrumbItemProps} from './types';
+import {BreadcrumbsProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
@@ -14,7 +14,7 @@ export default function Breadcrumbs(props: BreadcrumbsProps) {
     const children = generateChildren(props);
 
     return (
-        <BreadcrumbContainer className={props.className} style={props.style}>
+        <BreadcrumbContainer className={props.className} style={props.style} withBackground={props.withBackground}>
             {children}
         </BreadcrumbContainer>
     );
@@ -42,9 +42,8 @@ function generateBreadcrumbList(items, props) {
     const masterItemList = [] as any[];
 
     items.forEach((item, i) => {
-        const isLastItem = i + 1 === totalItems;
-        const key = '' + item.key;
-        const {name, url} = item;
+        const isLastItem = (i + 1 === totalItems);
+        const {name, key, url} = item;
 
         masterItemList.push(
             // @ts-ignore
@@ -61,7 +60,7 @@ function generateBreadcrumbList(items, props) {
 
         if (!isLastItem) {
             // @ts-ignore
-            masterItemList.push(<BreadcrumbSeparator key={key + '-separator'}/>);
+            masterItemList.push(<BreadcrumbSeparator key={key + '-separator'} separator={props.separator}/>);
         }
     });
 
@@ -89,7 +88,7 @@ function validateItems(items) {
             }
 
             if (generateKeys) {
-                item.key = i;
+                item.key = '' + i;
             }
         }
     });

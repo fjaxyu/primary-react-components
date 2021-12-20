@@ -59,12 +59,14 @@ async function getFileContents(fullFilePath, options) {
 
 export async function getReadmeFileContents(component) {
 	return new Promise(async (resolve, reject) => {
+		let response = '';
 		try {
-			let response = await getFileContents('/../../../src/components/' + component + '/README.md');
-			resolve(response);
+			response = await getFileContents(__dirname + `/../../../src/components/${component}/README.md`);
 		} catch (error) {
-			resolve('');
+			console.log(error);
 		}
+
+		resolve(response);
 	});
 }
 
