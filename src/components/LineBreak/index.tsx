@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import {LineBreakProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
@@ -13,23 +15,6 @@ export default function Index(props: LineBreakProps) {
 }
 
 
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PROPS
-
-export type LineBreakProps = {
-    className?: string | Array<string>,
-    style?: React.CSSProperties,
-    children?: React.ReactNode,
-    noMargins?: boolean,
-    noMargin?: boolean,
-    clear?: boolean,
-    innerRef?: any,
-    blank?: boolean,
-    br?: boolean
-}
-
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PRIVATE METHODS
 
 function getClassNames(props) {
     const classNames = [

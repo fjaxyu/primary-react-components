@@ -14,7 +14,8 @@ export type ButtonProps = {
     title?: string,
     size?: 'xs' | 'sm' | 'md' | 'lg',
     type?: (
-        'primary' | 'blue' | 'secondary' |
+        'primary' | 'blue' |
+        'secondary' |
         'success' | 'green' |
         'danger' | 'red' | 'error' |
         'warning' | 'yellow' |

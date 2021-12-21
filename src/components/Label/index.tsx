@@ -1,8 +1,10 @@
 import * as React from 'react'
 
+import {LabelProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-const Index = (props: LabelProps) => {
+export default function Label(props: LabelProps) {
     const classNames = getClassNames(props);
     
     return (
@@ -11,25 +13,7 @@ const Index = (props: LabelProps) => {
         </label>
     );
 };
-export default Index;
 
-
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PROPS
-
-export type LabelProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    onClick?: (event: React.MouseEvent<HTMLLabelElement, MouseEvent>) => void,
-    size?: string,
-    title?: string,
-    innerRef?: any,
-    children?: React.ReactNode
-};
-
-
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PRIVATE METHODS
 
 function getClassNames(props) {
     const classNames = ['label'];

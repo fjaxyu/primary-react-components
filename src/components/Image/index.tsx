@@ -1,15 +1,14 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import {ImageProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-const Index = (props: ImageProps) => {
+export default function Image(props: ImageProps) {
     const classNames = getClassNames(props);
 
     return (
-        <img
-             id={props.id}
+        <img id={props.id}
              title={props.title}
              src={props.src}
              alt={props.alt || ''}
@@ -24,7 +23,6 @@ const Index = (props: ImageProps) => {
     );
 };
 
-export default Index;
 
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//

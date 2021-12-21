@@ -1,22 +1,11 @@
 import * as React from 'react';
 
+import {LinkProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export type PageLinkProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    href?: () => void,
-    onClick?: () => void,
-    innerRef?: any,
-    notHref?: boolean,
-    disabled?: boolean,
-    textCenter?: boolean,
-    title?: string
-}
 
-
-const PageLink = (props: PageLinkProps) => {
+export default function LinkProps(props: LinkProps) {
     const classNames = getClassNames(props);
 
     if (props.notHref) {
@@ -49,7 +38,6 @@ const PageLink = (props: PageLinkProps) => {
         );
     }
 };
-export default PageLink;
 
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//

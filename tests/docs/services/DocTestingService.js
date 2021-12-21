@@ -71,7 +71,23 @@ export async function getReadmeFileContents(component) {
 }
 
 
+
+export async function getTypeFileContents(component) {
+	return new Promise(async (resolve, reject) => {
+		let response = '';
+		try {
+			response = await getFileContents(__dirname + `/../../../src/components/${component}/types.ts`);
+		} catch (error) {
+			console.log(error);
+		}
+
+		resolve(response);
+	});
+}
+
+
 export default {
 	getFolderContents,
-	getReadmeFileContents
+	getReadmeFileContents,
+	getTypeFileContents
 };

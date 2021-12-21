@@ -4,6 +4,10 @@
     "description": "A Typescript React-JSX component and CSS/SCSS library targeting Bootstrap with the intention to simplify and standardize the interaction with components",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fjaxyu/primary-react-components.git"
+    },
     "scripts": {
         "test": "npm run test-components",
         "test-components": "ts-mocha -p tsconfig.json src/components/**/*.spec.tsx",

@@ -7,5 +7,5 @@ functionality beyond the smarter component.
 #### Usage
 
 ```jsx
-<BreadcrumbSeparator>|</BreadcrumbSeparator>
+<BreadcrumbSeparator separator={'|'}/>
 ```
