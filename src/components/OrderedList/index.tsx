@@ -4,7 +4,7 @@ import {OrderedListProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: OrderedListProps) {
+export default function OrderedList(props: OrderedListProps) {
     const classNames = getClassNames(props);
 
     return (

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export type MediaItemProps = {
-    className: string,
+    className?: string,
     style?: React.CSSProperties,
     border?: boolean,
     borderBottom?: boolean,

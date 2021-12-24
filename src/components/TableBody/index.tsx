@@ -4,7 +4,7 @@ import {TableBodyProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: TableBodyProps) {
+export default function TableBody(props: TableBodyProps) {
     const classNames = getClassNames(props);
 
     return (

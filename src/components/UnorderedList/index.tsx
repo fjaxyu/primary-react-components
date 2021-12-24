@@ -4,7 +4,7 @@ import {UnorderedListProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: UnorderedListProps) {
+export default function UnorderedList(props: UnorderedListProps) {
     const classNames = getClassNames(props);
 
     return (

@@ -6,7 +6,7 @@ import Image from './../Image';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: LoadingSpinnerProps) {
+export default function LoadingSpinner(props: LoadingSpinnerProps) {
     let {size, speed, style, className} = props;
 
     const DEFAULT_SIZE = 35;

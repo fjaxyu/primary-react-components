@@ -14,7 +14,7 @@ import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: SmartCardProps) {
+export default function SmartCard(props: SmartCardProps) {
     const GeneratedCard = getCard();
     const isLink = !!props.href;
 

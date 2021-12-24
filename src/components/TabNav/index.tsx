@@ -13,7 +13,7 @@ import {TypeService} from './../../services';
 
 
 
-export default function Index(props: TabNavProps) {
+export default function TabNav(props: TabNavProps) {
     let {views, activeViewID, reset} = props;
 
     let [hasLoaded, setHasLoaded] = React.useState(false);

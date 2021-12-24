@@ -10,7 +10,7 @@ import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: ListGroupItemProps) {
+export default function ListGroupItem(props: ListGroupItemProps) {
     const classNames = getClassNames(props);
     const badge = getBadge(props);
     const style = getStyle(props);

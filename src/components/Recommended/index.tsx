@@ -4,7 +4,7 @@ import {RecommendedProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: RecommendedProps) {
+export default function Recommended(props: RecommendedProps) {
     const classNames = getClassNames(props);
 
     return (

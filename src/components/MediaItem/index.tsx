@@ -8,7 +8,7 @@ import MediaImage from './../MediaImage';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: MediaItemProps) {
+export default function MediaItem(props: MediaItemProps) {
     const {className, style, border, borderBottom, src, position, children} = props;
 
     return (

@@ -5,12 +5,11 @@ import {ListItemProps} from './types';
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
-export default function Index(props: ListItemProps) {
+export default function ListItem(props: ListItemProps) {
     const classNames = getClassNames(props);
 
     return (
-        <li
-            className={classNames}
+        <li className={classNames}
             style={props.style}
             data-has-on-click={!!props.onClick}
             onClick={props.onClick}

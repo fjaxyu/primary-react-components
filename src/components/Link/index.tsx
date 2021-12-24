@@ -5,7 +5,7 @@ import {LinkProps} from './types';
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
-export default function LinkProps(props: LinkProps) {
+export default function Link(props: LinkProps) {
     const classNames = getClassNames(props);
 
     if (props.notHref) {

@@ -4,7 +4,7 @@ import {RowProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: RowProps) {
+export default function Row(props: RowProps) {
     const classNames = getClassNames(props);
 
     return (

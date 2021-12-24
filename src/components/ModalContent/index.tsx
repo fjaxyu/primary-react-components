@@ -6,7 +6,7 @@ import {ModalShouldBeClosedContext} from './../../support/ModalShouldBeClosedCon
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: ModalContentProps) {
+export default function ModalContent(props: ModalContentProps) {
     const classNames = getClassNames(props);
 
     return (

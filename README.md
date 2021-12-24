@@ -1721,7 +1721,7 @@ export type MediaImageProps = {
 #### Types
 ```typescript
 export type MediaItemProps = {
-    className: string,
+    className?: string,
     style?: React.CSSProperties,
     border?: boolean,
     borderBottom?: boolean,

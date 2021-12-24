@@ -4,7 +4,7 @@ import {SmallProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: SmallProps) {
+export default function Small(props: SmallProps) {
     const classNames = getClassNames(props);
 
     return (

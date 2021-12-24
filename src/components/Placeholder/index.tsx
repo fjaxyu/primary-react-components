@@ -6,7 +6,7 @@ import {PlaceholderProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: PlaceholderProps) {
+export default function Placeholder(props: PlaceholderProps) {
     const tempProps = {...props};
 
     const classes = getClassNames(props);
@@ -28,49 +28,50 @@ export default function Index(props: PlaceholderProps) {
         <p style={style} className={classes}/>
     );
 
+}
 
 
-    function getClassNames(props) {
-        let classNames = [
-            'placeholder'
-        ];
 
-        if (props.block === true) {
-            classNames.push('display-block');
-        }
+function getClassNames(props) {
+    let classNames = [
+        'placeholder'
+    ];
 
-        if (props.inline === true) {
-            classNames.push('display-inline-block');
-        }
-
-        if (props.paragraph === true) {
-            classNames.push('paragraph');
-        }
-
-        if (props.title === true) {
-            classNames.push('title');
-        }
-
-        if (props.className) {
-            classNames.push(props.className);
-        }
-
-        return classNames.join(' ');
+    if (props.block === true) {
+        classNames.push('display-block');
     }
 
-
-
-    function getStyle(props) {
-        let defaultStyle = {
-            width: '10rem'
-        };
-
-        if (props.width) {
-            defaultStyle.width = props.width;
-        }
-
-        return {...defaultStyle, ...props.style};
+    if (props.inline === true) {
+        classNames.push('display-inline-block');
     }
+
+    if (props.paragraph === true) {
+        classNames.push('paragraph');
+    }
+
+    if (props.title === true) {
+        classNames.push('title');
+    }
+
+    if (props.className) {
+        classNames.push(props.className);
+    }
+
+    return classNames.join(' ');
+}
+
+
+
+function getStyle(props) {
+    let defaultStyle = {
+        width: '10rem'
+    };
+
+    if (props.width) {
+        defaultStyle.width = props.width;
+    }
+
+    return {...defaultStyle, ...props.style};
 }
 
 

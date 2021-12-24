@@ -28,8 +28,6 @@ export default function Paragraph(props: ParagraphProps) {
 };
 
 
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PRIVATE METHODS
 
 function getClassNames(props) {
     const classNames = [

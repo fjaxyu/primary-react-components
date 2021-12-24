@@ -4,7 +4,7 @@ import {MainProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: MainProps) {
+export default function Main(props: MainProps) {
     const classNames = getClassNames(props);
 
     return (

@@ -4,7 +4,7 @@ import {RequiredProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: RequiredProps) {
+export default function Required(props: RequiredProps) {
     const classNames = getClassNames(props);
 
     return (

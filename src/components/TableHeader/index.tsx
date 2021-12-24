@@ -5,7 +5,7 @@ import {TableHeaderProps} from './types';
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
-export default function Index(props: TableHeaderProps) {
+export default function TableHeader(props: TableHeaderProps) {
     const classNames = getClassNames(props);
 
     return (

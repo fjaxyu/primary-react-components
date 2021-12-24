@@ -4,12 +4,11 @@ import {TableDataProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: TableDataProps) {
+export default function TableData(props: TableDataProps) {
     const classNames = getClassNames(props);
 
     return (
-        <td
-            className={classNames}
+        <td className={classNames}
             style={props.style}
             colSpan={props.colSpan || props.colspan}
             ref={props.innerRef}>

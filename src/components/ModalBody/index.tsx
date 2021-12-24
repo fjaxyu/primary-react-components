@@ -4,7 +4,7 @@ import {ModalBodyProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: ModalBodyProps) {
+export default function ModalBody(props: ModalBodyProps) {
     const classNames = getClassNames(props);
 
     return (

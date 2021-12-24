@@ -4,7 +4,7 @@ import {ModalFooterProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: ModalFooterProps) {
+export default function ModalFooter(props: ModalFooterProps) {
     const classNames = getClassNames(props);
 
     return (

@@ -4,7 +4,7 @@ import {TableRowProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: TableRowProps) {
+export default function TableRow(props: TableRowProps) {
     const classNames = getClassNames(props);
 
     return (

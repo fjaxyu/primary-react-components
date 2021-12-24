@@ -6,14 +6,13 @@ import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export default function Index(props: ModalHeaderProps) {
+export default function ModalHeader(props: ModalHeaderProps) {
     const classNames = getClassNames(props);
     const closeButton = getCloseButton(props);
 
 
     return (
-        <div
-             className={classNames}
+        <div className={classNames}
              style={props.style}
              data-has-on-close={!!props.onClose}
              ref={props.innerRef}>
