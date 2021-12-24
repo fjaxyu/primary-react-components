@@ -123,11 +123,6 @@ export {Image};
 
 
 
-import InlineSeparator from './src/components/InlineSeparator/index';
-export {InlineSeparator};
-
-
-
 import Input from './src/components/Input/index';
 export {Input};
 
@@ -419,7 +414,6 @@ export default {
     IconLinkCard,
     IconLinkCardList,
     Image,
-    InlineSeparator,
     Input,
     InputCheckbox,
     InputDate,

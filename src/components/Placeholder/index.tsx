@@ -2,18 +2,9 @@ import * as React from 'react';
 
 import {TypeService} from './../../services';
 
+import {PlaceholderProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type PlaceholderProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode,
-    title?: boolean,
-    block?: boolean,
-    inline?: boolean,
-}
-
 
 export default function Index(props: PlaceholderProps) {
     const tempProps = {...props};

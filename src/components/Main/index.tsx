@@ -1,16 +1,8 @@
 import * as React from 'react';
 
+import {MainProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type MainProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
-
-
 
 export default function Index(props: MainProps) {
     const classNames = getClassNames(props);

@@ -1,14 +1,8 @@
 import * as React from 'react';
 
+import {TableHeadProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type TableHeadProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
-
 
 export default function Index(props: TableHeadProps) {
     const classNames = getClassNames(props);

@@ -288,7 +288,7 @@ functionality beyond the smarter component.
 #### Usage
 
 ```jsx
-<BreadcrumbSeparator>|</BreadcrumbSeparator>
+<BreadcrumbSeparator separator={'|'}/>
 ```
 
 #### Types
@@ -296,7 +296,6 @@ functionality beyond the smarter component.
 export type BreadcrumbSeparatorProps = {
     className?: string,
     style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
     innerRef?: any,
     separator?: string
 }
@@ -369,7 +368,8 @@ export type ButtonProps = {
     title?: string,
     size?: 'xs' | 'sm' | 'md' | 'lg',
     type?: (
-        'primary' | 'blue' | 'secondary' |
+        'primary' | 'blue' |
+        'secondary' |
         'success' | 'green' |
         'danger' | 'red' | 'error' |
         'warning' | 'yellow' |
@@ -628,7 +628,16 @@ The position is important to include, 'top', 'middle', 'bottom' and will default
 
 #### Types
 ```typescript
-
+export type CardImageProps = {
+    src: string,
+    alt?: string,
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    noPosition?: boolean,
+    background?: string,
+    position?: 'top' | 'bottom' | 'both'
+}
 ```
 
 ---
@@ -730,12 +739,12 @@ export type ContainerProps = {
 
 ### Form
 
-[DESCRIPTION]
+The standard html Form wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Form>...</Form>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -755,12 +764,15 @@ export type FormProps = {
 
 ### FormGroup
 
-[DESCRIPTION]
+An input wrapper for the label and input elements
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<FormGroup>
+    <Label>First Name</Label>
+    <Input type={'text'} placeholder={'First Name'}/>
+</FormGroup>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -780,13 +792,15 @@ export type FormGroupProps = {
 
 ### Header
 
-[DESCRIPTION]
+A wrapper for the standard h* elements
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Header size={'xl'}>Dashboard</Header>
 ```
+
+There are also sizes beyond the standard h1 to h6, with "xxl" and "xxxs"
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
@@ -898,12 +912,12 @@ export type IconLinkCardListProps = {
 
 ### Image
 
-[DESCRIPTION]
+A standard wrapper for the html img tag
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Image src={'/assets/images/mountains.png'}/>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -921,30 +935,6 @@ export type ImageProps = {
     onClick?: () => void,
     clickHover?: boolean
 };
-```
-
----
-
-### InlineSeparator
-
-[DESCRIPTION]
-
-#### Usage
-
-```jsx
-[DETAILS]
-```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
-
-#### Types
-```typescript
-export type InlineSeparatorProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
 ```
 
 ---
@@ -1163,7 +1153,27 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type InputNumberProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    focus?: boolean,
+    mode?: string,
+    //When the input changes, this function will be called
+    onChange?: (string, InputNumberProps, {value, event, props}) => void,
+    //The value of the input
+    value?: string | number,
+    autocomplete?: string,
+    //The placeholder for the element
+    placeholder?: string,
+    //disables the input and prevents the user from entering any information
+    disabled?: boolean,
+    //Adds some error stylings to the input
+    hasError?: boolean,
+    //center the text inside the input
+    textCenter?: boolean,
+    innerRef?: any
+};
 ```
 
 ---
@@ -1182,7 +1192,27 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type InputRadioOption = {
+    value: string,
+    text: string,
+    className?: string
+}
+export type InputRadioProps = {
+    children?: React.ReactNode,
+    style?: React.CSSProperties,
+    className?: string | Array<string>,
+    name: string,
+    options: InputRadioOption[],
+    onChange: (string, OptionType) => void,
+    focus?: boolean,
+    hasError?: boolean,
+    disabled?: boolean,
+    title?: string,
+    value?: string | number | boolean,
+    id?: string,
+    ref?: any,
+    innerRef?: any
+}
 ```
 
 ---
@@ -1201,7 +1231,29 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type InputSelectOption = {
+    value: string,
+    text: string
+}
+export type InputSelectProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    //When the input changes, this function will be called
+    onChange?: (string, InputSelectProps, {value, event, props}) => void,
+    //The list of possible radio options that the user can select from
+    options?: InputSelectOption[],
+    //The value of the input
+    value: string | boolean | number | Record<any, unknown> | any[],
+    //If true, this will set the focus automatically when the input is loaded
+    focus?: boolean,
+    //disables the input and prevents the user from entering any information
+    disabled?: boolean,
+    //Adds some error stylings to the input
+    hasError?: boolean,
+    innerRef?: any,
+    mode?: string
+};
 ```
 
 ---
@@ -1220,7 +1272,32 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type InputTextProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    innerRef?: any,
+    autocomplete?: string,
+    //When the input changes, this function will be called
+    onChange?: (string, InputTextProps, {value, event, props}) => void,
+    onEnter?: (Record) => void,
+    //The value of the input
+    value?: string,
+    size?: string,
+    //If true, this will set the focus automatically when the input is loaded
+    focus?: boolean,
+    //The type of the input
+    type?: string,
+    //The placeholder for the element
+    placeholder?: string,
+    //disables the input and prevents the user from entering any information
+    disabled?: boolean,
+    //Adds some error stylings to the input
+    hasError?: boolean,
+    //center the text inside the input
+    textCenter?: boolean,
+    mode?: string
+};
 ```
 
 ---
@@ -1239,7 +1316,29 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TextAreaProps = {
+    className?: string | Array<string>,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    focus?: boolean,
+    onChange?: (string, TextAreaProps, {value, event, props}) => void,
+    onCommandEnter?: (Record) => void,
+    onEnter?: (Record) => void,
+    ref?: Ref<any>,
+    hasError?: boolean,
+    disabled?: boolean,
+    autocomplete?: string,
+    autosize?: boolean,
+    placeholder?: string,
+    value?: string,
+    rows?: number,
+    textCenter?: boolean,
+    mode?: 'plain' | string,
+    maxRows?: number,
+    minRows?: number,
+    onHeightChange?: (height) => void,
+    cacheMeasurements?: boolean,
+}
 ```
 
 ---
@@ -1258,26 +1357,55 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TextAreaAutoresizeProps = {
+    className?: string | Array<string>,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    focus?: boolean,
+    onChange?: (string, TextAreaProps, {value, event, props}) => void,
+    onEnter?: (Record) => void,
+    onCommandEnter?: (Record) => void,
+    hasError?: boolean,
+    disabled?: boolean,
+    autocomplete?: string,
+    autosize?: boolean,
+    placeholder?: string,
+    value?: string,
+    rows?: number,
+    textCenter?: boolean,
+    mode?: 'plain' | string,
+    maxRows?: number,
+    minRows?: number,
+    onHeightChange?: (height) => void,
+    cacheMeasurements?: boolean,
+}
 ```
 
 ---
 
 ### Label
 
-[DESCRIPTION]
+A simple wrapper for the html label tag
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Label>First Name</Label>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
-
+export type LabelProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    onClick?: (event: React.MouseEvent<HTMLLabelElement, MouseEvent>) => void,
+    size?: string,
+    title?: string,
+    innerRef?: any,
+    children?: React.ReactNode
+};
 ```
 
 ---
@@ -1296,7 +1424,21 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type LabelValueProps = {
+    label: string | number | React.ReactNode,
+    value: string | number | React.ReactNode,
+    style?: React.CSSProperties,
+    size?: 'sm',
+    className?: string,
+    labelStyle?: React.CSSProperties,
+    labelLink?: () => void,
+    labelClick?: () => void,
+    labelLoading?: boolean,
+    valueStyle?: React.CSSProperties,
+    valueLink?: () => void,
+    valueClick?: () => void,
+    valueLoading?: boolean,
+};
 ```
 
 ---
@@ -1315,7 +1457,17 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type LineBreakProps = {
+    className?: string | Array<string>,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    noMargins?: boolean,
+    noMargin?: boolean,
+    clear?: boolean,
+    innerRef?: any,
+    blank?: boolean,
+    br?: boolean
+}
 ```
 
 ---
@@ -1334,7 +1486,18 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type LinkProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    href?: () => void,
+    onClick?: () => void,
+    innerRef?: any,
+    notHref?: boolean,
+    disabled?: boolean,
+    textCenter?: boolean,
+    title?: string
+}
 ```
 
 ---
@@ -1353,7 +1516,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ListGroupProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+};
 ```
 
 ---
@@ -1372,7 +1540,15 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ListGroupItemProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    onClick?: () => void,
+    badge?: string,
+    badgeType?: string,
+    badgeColor?: string
+}
 ```
 
 ---
@@ -1391,7 +1567,13 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ListItemProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    onClick?: () => void
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+};
 ```
 
 ---
@@ -1410,7 +1592,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type LoadingSpinnerProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    size?: number,
+    speed?: 'slow' | 'default' | 'fast'
+};
 ```
 
 ---
@@ -1429,7 +1616,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type MainProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1448,7 +1640,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type MediaBodyProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1467,7 +1664,16 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type MediaContainerProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    border?: boolean,
+    withBorder?: boolean,
+    borderBottom?: boolean,
+    bordered?: boolean,
+}
 ```
 
 ---
@@ -1486,7 +1692,16 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type MediaImageProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    src: string,
+    //The vertical position of the image, relative to the rest of the media body
+    position?: string,
+    //Whether the image appears before or after the media body
+    order?: string
+};
 ```
 
 ---
@@ -1505,7 +1720,15 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type MediaItemProps = {
+    className: string,
+    style?: React.CSSProperties,
+    border?: boolean,
+    borderBottom?: boolean,
+    src: string,
+    position?: string,
+    children: React.ReactNode,
+};
 ```
 
 ---
@@ -1524,7 +1747,24 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ModalProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    show: boolean,
+    size?: (
+        'sm' | 'small' |
+        'lg' | 'large' |
+        'xl' | 'extra-large'
+        ),
+    centered?: boolean,
+    disableEscapeClose?: boolean,
+    disableBackgroundClose?: boolean,
+    closeModal?: () => void,
+    onBackgroundClick?: () => void,
+    onEscapeClick?: () => void,
+    onShow?: () => void,
+    onHide?: () => void,
+};
 ```
 
 ---
@@ -1543,7 +1783,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ModalBodyProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1562,7 +1807,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ModalContentProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+};
 ```
 
 ---
@@ -1581,7 +1831,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ModalFooterProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+};
 ```
 
 ---
@@ -1600,7 +1855,15 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ModalHeaderProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    onClose?: () => void,
+    noBorder?: boolean,
+    closeOnly?: boolean,
+};
 ```
 
 ---
@@ -1619,7 +1882,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type OrderedListProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1638,7 +1906,19 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ParagraphProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    innerRef?: any,
+    title?: string,
+    textCenter?: boolean,
+    textLeft?: boolean,
+    textRight?: boolean,
+    //A simple additional styling option to quickly format the text as a certain type
+    type?: string,
+    onClick?: (props, event) => void
+};
 ```
 
 ---
@@ -1657,7 +1937,14 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type PlaceholderProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    title?: boolean,
+    block?: boolean,
+    inline?: boolean,
+}
 ```
 
 ---
@@ -1676,7 +1963,17 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ProgressBarProps = {
+    height: number,
+    value: number,
+    color?: string,
+    type?: string,
+    animated?: boolean,
+    striped?: boolean,
+    showLabel?: boolean,
+    className?: string,
+    style?: React.CSSProperties,
+}
 ```
 
 ---
@@ -1695,7 +1992,13 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ProgressBarContainerProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    height?: number,
+}
 ```
 
 ---
@@ -1714,7 +2017,20 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ProgressBarProgressProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    color?: string,
+    //Make the progress bar striped
+    striped?: boolean,
+    //If the progress bar is striped, this will animate it
+    animated?: boolean,
+    type?: string,
+    innerRef?: any,
+    value?: number,
+    showLabel?: boolean
+};
 ```
 
 ---
@@ -1733,7 +2049,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type RecommendedProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1752,7 +2073,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type RequiredProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1771,7 +2097,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type RowProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1790,7 +2121,10 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type ShowProps = {
+    show: boolean,
+    children?: React.ReactNode | React.ReactNodeArray,
+}
 ```
 
 ---
@@ -1809,7 +2143,11 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type SidebarMainContainerProps = ContainerProps & {
+    className?: string
+    children: React.ReactNode,
+    style?: React.CSSProperties,
+};
 ```
 
 ---
@@ -1828,7 +2166,13 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type SidebarSideContainerProps = ContainerProps &  {
+    className?: string,
+    children?: React.ReactNode,
+    fixed?: boolean,
+    card?: boolean,
+    style?: React.CSSProperties,
+};
 ```
 
 ---
@@ -1847,7 +2191,13 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type SmallProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    title?: string,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1866,7 +2216,27 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type SmartCardProps = {
+    href?: () => void,
+    onClick?: () => void,
+    className?: string,
+    style?: React.CSSProperties,
+    headerStyle?: React.CSSProperties,
+    footerStyle?: React.CSSProperties,
+    bodyStyle?: React.CSSProperties,
+    iconStyle?: React.CSSProperties,
+    shadow?: CardProps['shadow'],
+    position?: 'top' | 'bottom' | 'both',
+    header?: string | React.ReactNode,
+    footer?: string | React.ReactNode,
+    children?: string | React.ReactNode,
+    src?: string,
+    iconSrc?: string,
+    icon?: string,
+    iconColor?: string,
+    iconSize?: SizeProp,
+    iconBackground?: string,
+}
 ```
 
 ---
@@ -1885,7 +2255,21 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TableProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    striped?: boolean,
+    hover?: boolean,
+    bordered?: boolean,
+    small?: boolean,
+    responsive?: boolean,
+    'responsive-sm'?: boolean,
+    'responsive-md'?: boolean,
+    'responsive-lg'?: boolean,
+    'responsive-xl'?: boolean,
+};
 ```
 
 ---
@@ -1904,7 +2288,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TableBodyProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1923,7 +2312,15 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TableDataProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    colSpan?: number,
+    colspan?: number,
+    align?: 'left' | 'center' | 'right'
+};
 ```
 
 ---
@@ -1942,7 +2339,12 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TableHeadProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+}
 ```
 
 ---
@@ -1961,7 +2363,13 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TableHeaderProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    align?: 'left' | 'center' | 'right'
+};
 ```
 
 ---
@@ -1980,7 +2388,14 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TableRowProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    onClick?: () => void,
+    align?: 'middle',
+    innerRef?: any,
+};
 ```
 
 ---
@@ -1999,7 +2414,19 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TabNavProps = {
+    views: ViewList,
+    activeViewID?: string,
+    reset?: any
+};
+export type View = {
+    id: string,
+    name: React.ReactNode | string,
+    children: React.ReactNode,
+    onOpen?: (previousView: string) => void,
+    onClose?: () => void
+}
+export type ViewList = View[];
 ```
 
 ---
@@ -2018,7 +2445,25 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type TextProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode,
+    //text align to the center
+    textCenter?: boolean,
+    //text align to the left
+    textLeft?: boolean,
+    innerRef?: any,
+    title?: string,
+    bold?: boolean,
+    italic?: boolean,
+    disabled?: boolean,
+    //text align to the right
+    textRight?: boolean,
+    //A simple additional styling option to quickly format the text as a certain type
+    type?: string,
+    onClick?: (props, event) => void
+}
 ```
 
 ---
@@ -2037,7 +2482,13 @@ export type InputGroupTextProps = {
 
 #### Types
 ```typescript
-
+export type UnorderedListProps = {
+    className?: string,
+    style?: React.CSSProperties,
+    children?: React.ReactNode | React.ReactNodeArray,
+    innerRef?: any,
+    type?: 'help',
+}
 ```
 
 ---

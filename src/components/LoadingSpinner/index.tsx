@@ -1,17 +1,10 @@
 import * as React from 'react';
 
+import {LoadingSpinnerProps} from './types';
+
 import Image from './../Image';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type LoadingSpinnerProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    size?: number,
-    speed?: 'slow' | 'default' | 'fast'
-};
-
 
 export default function Index(props: LoadingSpinnerProps) {
     let {size, speed, style, className} = props;

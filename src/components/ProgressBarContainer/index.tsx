@@ -1,18 +1,8 @@
 import * as React from 'react';
 
+import {ProgressBarContainerProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type ProgressBarContainerProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-    height?: number,
-}
-
-
 
 export default function ProgressBarContainer(props: ProgressBarContainerProps) {
     const classNames = getClassNames(props);

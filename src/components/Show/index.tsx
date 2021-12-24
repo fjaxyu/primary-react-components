@@ -1,11 +1,8 @@
 import * as React from 'react';
 
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
+import {ShowProps} from './types';
 
-export type ShowProps = {
-    show: boolean,
-    children?: React.ReactNode | React.ReactNodeArray,
-}
+//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
 export default function Index(props: ShowProps) {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-export type Option = {
+export type InputRadioOption = {
     value: string,
     text: string,
     className?: string
@@ -13,7 +13,7 @@ export type InputRadioProps = {
     className?: string | Array<string>,
     name: string,
 
-    options: Option[],
+    options: InputRadioOption[],
     onChange: (string, OptionType) => void,
     focus?: boolean,
 

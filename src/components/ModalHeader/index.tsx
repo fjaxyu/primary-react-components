@@ -1,20 +1,10 @@
 import * as React from 'react';
 
+import {ModalHeaderProps} from './types';
+
 import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type ModalHeaderProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-    onClose?: () => void,
-    noBorder?: boolean,
-    closeOnly?: boolean,
-};
-
-
 
 export default function Index(props: ModalHeaderProps) {
     const classNames = getClassNames(props);

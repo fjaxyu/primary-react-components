@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {ModalProps} from './types';
+
 import {TypeService} from './../../services';
 
 const CONSTANTS = {
@@ -14,23 +16,6 @@ const CONSTANTS = {
 };
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-const TS_VALID_SIZES = [...Object.keys(CONSTANTS.VALID_SIZES)] as const;
-
-export type ModalProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    show: boolean,
-    size?: (typeof TS_VALID_SIZES) | string,
-    centered?: boolean,
-    disableEscapeClose?: boolean,
-    disableBackgroundClose?: boolean,
-    closeModal?: () => void,
-    onBackgroundClick?: () => void,
-    onEscapeClick?: () => void,
-    onShow?: () => void,
-    onHide?: () => void,
-};
 
 export type ModalState = {
     dialogueWasClicked: boolean

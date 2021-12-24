@@ -1,14 +1,8 @@
 import * as React from 'react';
 
+import {RequiredProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type RequiredProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
 
 export default function Index(props: RequiredProps) {
     const classNames = getClassNames(props);

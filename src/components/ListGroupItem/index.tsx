@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {ListGroupItemProps} from './types';
+
 import ListItem from './../ListItem';
 import Badge from './../Badge';
 import Button from './../Button';
@@ -7,19 +9,6 @@ import Button from './../Button';
 import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type ListGroupItemProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    onClick?: () => void,
-    badge?: string,
-    badgeType?: string,
-    badgeColor?: string
-}
-
-
 
 export default function Index(props: ListGroupItemProps) {
     const classNames = getClassNames(props);

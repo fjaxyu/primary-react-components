@@ -2,12 +2,17 @@ import * as React from 'react';
 
 
 import InputText from './../InputText';
-import InputSelect, {Option as InputSelectOption} from './../InputSelect';
+
+import InputSelect from './../InputSelect';
+import {InputSelectOption} from '../InputSelect/types';
+
+import InputRadio from './../InputRadio';
+import {InputRadioOption} from './../InputRadio/types';
+
 import InputNumber from './../InputNumber';
 import InputDate from './../InputDate';
 import InputCheckbox from './../InputCheckbox';
 import Label from './../Label';
-import InputRadio, {Option as InputRadioOption} from './../InputRadio';
 import InputTextArea from './../InputTextArea';
 import InputTextAreaAutoresize from './../InputTextAreaAutoresize';
 import Required from './../Required';

@@ -1,18 +1,13 @@
 import * as React from 'react';
 
-import Container, {ContainerProps} from './../Container';
+import Container from './../Container';
+
+import {SidebarMainContainerProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export type SidebarCompanionProps = ContainerProps & {
-    className?: string
-    children: React.ReactNode,
-    style?: React.CSSProperties,
-};
 
-
-
-export default function SidbarMainContainer(props: SidebarCompanionProps) {
+export default function SidebarMainContainer(props: SidebarMainContainerProps) {
     return (
         <Container className={'sidebar-companion ' + props.className}
                    style={props.style}

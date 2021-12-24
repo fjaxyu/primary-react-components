@@ -1,18 +1,10 @@
 import * as React from 'react';
 
+import {MediaBodyProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-
-export type Index = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
-
-
-
-export default function MediaBody(props: Index) {
+export default function MediaBody(props: MediaBodyProps) {
     const classNames = getClassNames(props);
 
     return (

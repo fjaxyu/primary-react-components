@@ -1,20 +1,13 @@
 import * as React from 'react';
 
-import Container, {ContainerProps} from './../Container';
+import Container from './../Container';
+
+import {SidebarSideContainerProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
-export type SidebarProps = ContainerProps &  {
-    className?: string,
-    children?: React.ReactNode,
-    fixed?: boolean,
-    card?: boolean,
-    style?: React.CSSProperties,
-};
-
-
-export default function SidebarSideContainer(props: SidebarProps) {
+export default function SidebarSideContainer(props: SidebarSideContainerProps) {
     const classes = getClasses();
 
     return (

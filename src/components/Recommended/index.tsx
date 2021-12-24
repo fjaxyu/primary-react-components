@@ -1,14 +1,8 @@
 import * as React from 'react';
 
+import {RecommendedProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type RecommendedProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
 
 export default function Index(props: RecommendedProps) {
     const classNames = getClassNames(props);

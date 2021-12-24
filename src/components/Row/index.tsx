@@ -1,14 +1,8 @@
 import * as React from 'react';
 
+import {RowProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type RowProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
 
 export default function Index(props: RowProps) {
     const classNames = getClassNames(props);

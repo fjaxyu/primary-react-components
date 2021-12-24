@@ -1,16 +1,11 @@
 import * as React from 'react';
 
+import {ListGroupProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-export type ListGroupProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-};
 
-
-const Index = (props: ListGroupProps) => {
+export default function ListGroup(props: ListGroupProps) {
     const classNames = getClassNames(props);
 
     return (
@@ -19,7 +14,6 @@ const Index = (props: ListGroupProps) => {
         </ul>
     );
 };
-export default Index;
 
 
 

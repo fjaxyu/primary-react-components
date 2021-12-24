@@ -1,14 +1,8 @@
 import * as React from 'react';
 
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
+import {UnorderedListProps} from './types';
 
-export type UnorderedListProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-    type?: 'help',
-}
+//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 export default function Index(props: UnorderedListProps) {
     const classNames = getClassNames(props);

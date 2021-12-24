@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-import Card, {CardProps} from './../Card';
+import {SmartCardProps} from './types';
+
+import Card from './../Card';
 import CardFooter from './../CardFooter';
 import CardHeader from './../CardHeader';
 import Link from './../Link';
@@ -10,35 +12,7 @@ import CardBody from './../CardBody';
 
 import {TypeService} from './../../services';
 
-import {SizeProp} from '@fortawesome/fontawesome-svg-core';
-
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type SmartCardProps = {
-    href?: () => void,
-    onClick?: () => void,
-    className?: string,
-
-    style?: React.CSSProperties,
-    headerStyle?: React.CSSProperties,
-    footerStyle?: React.CSSProperties,
-    bodyStyle?: React.CSSProperties,
-    iconStyle?: React.CSSProperties,
-
-    shadow?: CardProps['shadow'],
-    position?: 'top' | 'bottom' | 'both',
-    header?: string | React.ReactNode,
-    footer?: string | React.ReactNode,
-    children?: string | React.ReactNode,
-    src?: string,
-    iconSrc?: string,
-    icon?: string,
-    iconColor?: string,
-    iconSize?: SizeProp,
-    iconBackground?: string,
-}
-
-
 
 export default function Index(props: SmartCardProps) {
     const GeneratedCard = getCard();

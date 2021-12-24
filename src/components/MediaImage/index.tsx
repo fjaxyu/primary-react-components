@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import {MediaImageProps} from './types';
+
 import Image from './../Image';
 import {TypeService} from './../../services';
 
@@ -16,7 +18,7 @@ const CONSTANTS = {
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-const Index = (props: MediaImageProps) => {
+export default function MediaImage(props: MediaImageProps) {
     const classNames = getClassNames(props);
     const style = getStyle(props);
     
@@ -24,27 +26,8 @@ const Index = (props: MediaImageProps) => {
         <Image {...props} className={classNames} style={style}/>
     );
 };
-export default Index;
 
 
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PROPS
-
-export type MediaImageProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode,
-    src: string,
-    //The vertical position of the image, relative to the rest of the media body
-    position?: string,
-    
-    //Whether the image appears before or after the media body
-    order?: string
-};
-
-
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PRIVATE METHODS
 
 function getClassNames(props) {
     const classNames = [

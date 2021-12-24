@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {TabNavProps, View} from './types';
+
 import Box from './../Box';
 import Link from './../Link';
 import Text from './../Text';
@@ -8,25 +10,6 @@ import {TypeService} from './../../services';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-
-export type TabNavProps = {
-    views: ViewList,
-    activeViewID?: string,
-    reset?: any
-};
-
-
-export type View = {
-    id: string,
-    name: React.ReactNode | string,
-    children: React.ReactNode,
-    onOpen?: (previousView: string) => void,
-    onClose?: () => void
-}
-
-
-
-export type ViewList = View[];
 
 
 

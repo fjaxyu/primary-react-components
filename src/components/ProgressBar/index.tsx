@@ -1,25 +1,11 @@
 import * as React from 'react';
 
+import {ProgressBarProps} from './types';
 
 import ProgressBarContainer from './../ProgressBarContainer';
 import ProgressBarProgress from './../ProgressBarProgress';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type ProgressBarProps = {
-    height: number,
-    value: number,
-
-    color?: string,
-    type?: string,
-    animated?: boolean,
-    striped?: boolean,
-    showLabel?: boolean,
-
-    className?: string,
-    style?: React.CSSProperties,
-}
-
 
 export default function ProgressBar(props: ProgressBarProps) {
     return (

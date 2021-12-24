@@ -3,7 +3,7 @@ import * as React from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import {TypeService} from './../../services';
 
-import {TextAreaAutosizeProps} from './types';
+import {TextAreaAutoresizeProps} from './types';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 

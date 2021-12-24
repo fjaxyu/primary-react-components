@@ -1,15 +1,8 @@
 import * as React from 'react';
 
+import {TableBodyProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type TableBodyProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
-
 
 export default function Index(props: TableBodyProps) {
     const classNames = getClassNames(props);

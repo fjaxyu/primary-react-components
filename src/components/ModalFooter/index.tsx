@@ -1,15 +1,8 @@
 import * as React from 'react';
 
+import {ModalFooterProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type ModalFooterProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-};
-
 
 export default function Index(props: ModalFooterProps) {
     const classNames = getClassNames(props);

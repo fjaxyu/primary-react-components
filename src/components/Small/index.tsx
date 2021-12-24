@@ -1,14 +1,8 @@
 import * as React from 'react';
 
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
+import {SmallProps} from './types';
 
-export type SmallProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    title?: string,
-    innerRef?: any,
-}
+//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 export default function Index(props: SmallProps) {
     const classNames = getClassNames(props);

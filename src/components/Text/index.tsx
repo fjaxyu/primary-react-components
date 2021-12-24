@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {TextProps} from './types';
+
 const CONSTANTS = {
     VALID_TYPES: [
         'error',
@@ -14,35 +16,7 @@ const CONSTANTS = {
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
-export type TextProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode,
-    //text align to the center
-    textCenter?: boolean,
-
-    //text align to the left
-    textLeft?: boolean,
-    innerRef?: any,
-    title?: string,
-
-    bold?: boolean,
-
-    italic?: boolean,
-
-    disabled?: boolean,
-
-    //text align to the right
-    textRight?: boolean,
-
-    //A simple additional styling option to quickly format the text as a certain type
-    type?: string,
-    onClick?: (props, event) => void
-}
-
-
-
-export default function Index(props: TextProps) {
+export default function Text(props: TextProps) {
     const classes = getClasses(props);
 
     return (

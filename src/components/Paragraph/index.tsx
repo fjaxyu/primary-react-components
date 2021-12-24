@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {ParagraphProps} from './types';
+
 const CONSTANTS = {
     VALID_TYPES: [
         'error',
@@ -11,7 +13,7 @@ const CONSTANTS = {
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
-const Index = (props: ParagraphProps) => {
+export default function Paragraph(props: ParagraphProps) {
     const classes = getClassNames(props);
 
     return (
@@ -23,28 +25,6 @@ const Index = (props: ParagraphProps) => {
             {props.children}
         </p>
     );
-};
-
-export default Index;
-
-
-//===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-//PROPS
-
-export type ParagraphProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode,
-    innerRef?: any,
-
-    title?: string,
-    textCenter?: boolean,
-    textLeft?: boolean,
-    textRight?: boolean,
-
-    //A simple additional styling option to quickly format the text as a certain type
-    type?: string,
-    onClick?: (props, event) => void
 };
 
 

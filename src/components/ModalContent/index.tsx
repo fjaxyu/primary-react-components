@@ -1,18 +1,10 @@
 import * as React from 'react';
 
+import {ModalContentProps} from './types';
+
 import {ModalShouldBeClosedContext} from './../../support/ModalShouldBeClosedContext';
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type ModalContentProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-};
-
-
 
 export default function Index(props: ModalContentProps) {
     const classNames = getClassNames(props);

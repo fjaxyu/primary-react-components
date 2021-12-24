@@ -1,14 +1,8 @@
 import * as React from 'react';
 
+import {ModalBodyProps} from './types';
+
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-export type ModalBodyProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode | React.ReactNodeArray,
-    innerRef?: any,
-}
-
 
 export default function Index(props: ModalBodyProps) {
     const classNames = getClassNames(props);

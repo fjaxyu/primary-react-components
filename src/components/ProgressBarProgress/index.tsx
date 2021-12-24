@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import {TypeService} from './../../services';
 
+import {ProgressBarProgressProps} from './types';
+
 const CONSTANTS = {
     VALID_TYPES: {
         'primary': 'primary',
@@ -23,26 +25,6 @@ const CONSTANTS = {
 };
 
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
-
-
-export type ProgressBarProgressProps = {
-    className?: string,
-    style?: React.CSSProperties,
-    children?: React.ReactNode,
-    color?: string,
-    //Make the progress bar striped
-    striped?: boolean,
-
-    //If the progress bar is striped, this will animate it
-    animated?: boolean,
-
-    type?: string,
-    innerRef?: any,
-
-    value?: number,
-    showLabel?: boolean
-};
-
 
 export default function ProgressBarProgress(props: ProgressBarProgressProps) {
     const classNames = getClassNames(props);
