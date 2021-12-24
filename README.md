@@ -2005,12 +2005,18 @@ export type ProgressBarContainerProps = {
 
 ### ProgressBarProgress
 
-[DESCRIPTION]
+The progress-bar progress indicator.
+
+This component is used as a piece of the "ProgressBar" smart component. Use that instead, unless you need customized functionality.
 
 #### Usage
 
+The progress attribute "value" is a value from 0 to 100
+
 ```jsx
-[DETAILS]
+<ProgressBarContainer>
+    <ProgressBarProgress value={45}/>
+</ProgressBarContainer>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2037,12 +2043,18 @@ export type ProgressBarProgressProps = {
 
 ### Recommended
 
-[DESCRIPTION]
+A utility html `<sup>` element to add a blue "recommended" star (as opposed to red for "required")
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Recommended/>
+```
+
+```jsx
+<Header>
+    Sign Up <Recommended/>
+</Header>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2061,12 +2073,18 @@ export type RecommendedProps = {
 
 ### Required
 
-[DESCRIPTION]
+A utility html `<sup>` element to add a red "required" star
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Required/>
+```
+
+```jsx
+<Header>
+    Sign Up <Required/>
+</Header>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2085,12 +2103,12 @@ export type RequiredProps = {
 
 ### Row
 
-[DESCRIPTION]
+The [Bootstrap Row](https://getbootstrap.com/docs/4.0/layout/grid/) in the grid system
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Row>...</Row>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2109,12 +2127,31 @@ export type RowProps = {
 
 ### Show
 
-[DESCRIPTION]
+A utility component to easily hide or show content based on a boolean attribute.
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Show show={user.permissions.includes('round_details')}>
+	<Header size={'sm'}>Round Details</Header>
+	...
+</Show>
+```
+
+This component is kind of experimental. You'll run into issues like this throwing an error:
+
+```jsx
+//We're checking for user object existence here, but if it's null..
+<Show show={!!user}>
+	//An error would be thrown here whenever user is null, because this is still technically rendered
+	<Header>Hello, {user.name}</Header>
+</Show>
+```
+
+I think the alternative to this would be to
+
+```jsx
+{user && getUserDetails()}
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2179,12 +2216,14 @@ export type SidebarSideContainerProps = ContainerProps &  {
 
 ### Small
 
-[DESCRIPTION]
+`small` html wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Header>
+	{product.name}, <Small>{product.size}</Small>
+</Header>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2243,12 +2282,35 @@ export type SmartCardProps = {
 
 ### Table
 
-[DESCRIPTION]
+`table` html element wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Table>
+	<TableHead>
+		<TableRow>
+			<TableHeader>User ID</TableHeader>
+			<TableHeader>Name</TableHeader>
+			<TableHeader>Age</TableHeader>
+		</TableRow>
+	</TableHead>
+
+	<TableBody>
+		<TableRow>
+			<TableHeader>{user.user_id}</TableHeader>
+			<TableHeader>{user.name}</TableHeader>
+			<TableHeader>{user.age}</TableHeader>
+		</TableRow>
+	</TableBody>
+</Table>
+```
+
+```jsx
+<Table striped
+	   hover
+	   bordered
+	   small>...</Table>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2276,12 +2338,28 @@ export type TableProps = {
 
 ### TableBody
 
-[DESCRIPTION]
+`tbody` html element wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Table>
+	<TableHead>
+		<TableRow>
+			<TableHeader>User ID</TableHeader>
+			<TableHeader>Name</TableHeader>
+			<TableHeader>Age</TableHeader>
+		</TableRow>
+	</TableHead>
+    
+	<TableBody>
+		<TableRow>
+			<TableHeader>{user.user_id}</TableHeader>
+			<TableHeader>{user.name}</TableHeader>
+			<TableHeader>{user.age}</TableHeader>
+		</TableRow>
+	</TableBody>
+</Table>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2300,12 +2378,28 @@ export type TableBodyProps = {
 
 ### TableData
 
-[DESCRIPTION]
+`td` html element wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Table>
+	<TableHead>
+		<TableRow>
+			<TableHeader>User ID</TableHeader>
+			<TableHeader>Name</TableHeader>
+			<TableHeader>Age</TableHeader>
+		</TableRow>
+	</TableHead>
+    
+	<TableBody>
+		<TableRow>
+			<TableHeader>{user.user_id}</TableHeader>
+			<TableHeader>{user.name}</TableHeader>
+			<TableHeader>{user.age}</TableHeader>
+		</TableRow>
+	</TableBody>
+</Table>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2327,12 +2421,28 @@ export type TableDataProps = {
 
 ### TableHead
 
-[DESCRIPTION]
+`thead` html element wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Table>
+	<TableHead>
+		<TableRow>
+			<TableHeader>User ID</TableHeader>
+			<TableHeader>Name</TableHeader>
+			<TableHeader>Age</TableHeader>
+		</TableRow>
+	</TableHead>
+    
+	<TableBody>
+		<TableRow>
+			<TableHeader>{user.user_id}</TableHeader>
+			<TableHeader>{user.name}</TableHeader>
+			<TableHeader>{user.age}</TableHeader>
+		</TableRow>
+	</TableBody>
+</Table>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2351,12 +2461,28 @@ export type TableHeadProps = {
 
 ### TableHeader
 
-[DESCRIPTION]
+`th` html element wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Table>
+	<TableHead>
+		<TableRow>
+			<TableHeader>User ID</TableHeader>
+			<TableHeader>Name</TableHeader>
+			<TableHeader>Age</TableHeader>
+		</TableRow>
+	</TableHead>
+    
+	<TableBody>
+		<TableRow>
+			<TableHeader>{user.user_id}</TableHeader>
+			<TableHeader>{user.name}</TableHeader>
+			<TableHeader>{user.age}</TableHeader>
+		</TableRow>
+	</TableBody>
+</Table>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2376,12 +2502,28 @@ export type TableHeaderProps = {
 
 ### TableRow
 
-[DESCRIPTION]
+`tr` html element wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Table>
+	<TableHead>
+		<TableRow>
+			<TableHeader>User ID</TableHeader>
+			<TableHeader>Name</TableHeader>
+			<TableHeader>Age</TableHeader>
+		</TableRow>
+	</TableHead>
+    
+	<TableBody>
+		<TableRow>
+			<TableHeader>{user.user_id}</TableHeader>
+			<TableHeader>{user.name}</TableHeader>
+			<TableHeader>{user.age}</TableHeader>
+		</TableRow>
+	</TableBody>
+</Table>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2433,12 +2575,20 @@ export type ViewList = View[];
 
 ### Text
 
-[DESCRIPTION]
+A simple wrapper of the `span` html tag, with a few additional feature attributes
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Text>Hello, {name}</Text>
+```
+
+```jsx
+<Text bold>Hello, {name}</Text>
+```
+
+```jsx
+<Text italic>Hello, {name}</Text>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -2470,12 +2620,16 @@ export type TextProps = {
 
 ### UnorderedList
 
-[DESCRIPTION]
+A simple wrapper for the `ul` html element
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<UnorderedList>
+	<ListItem>Cats</ListItem>
+	<ListItem>Dogs</ListItem>
+	<ListItem>Birds</ListItem>
+</UnorderedList>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
