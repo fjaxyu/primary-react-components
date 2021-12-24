@@ -1,6 +1,6 @@
 {
     "name": "primary-react-components",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "A Typescript React-JSX component and CSS/SCSS library targeting Bootstrap with the intention to simplify and standardize the interaction with components",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
