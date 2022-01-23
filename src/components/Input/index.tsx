@@ -7,7 +7,7 @@ import InputSelect from './../InputSelect';
 import {InputSelectOption} from '../InputSelect/types';
 
 import InputRadio from './../InputRadio';
-import {InputRadioOption} from './../InputRadio/types';
+import {InputRadioOption} from '../InputRadio/types';
 
 import InputNumber from './../InputNumber';
 import InputDate from './../InputDate';

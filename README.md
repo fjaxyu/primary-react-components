@@ -992,15 +992,14 @@ export type InputProps = {
 
 ### InputCheckbox
 
-[DESCRIPTION]
+The HTML radio inputs grouped to one
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputCheckbox value={termsAreAgreed}
+               onChange={(newValue) => setTermsAreAgreed(newValue)}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1012,14 +1011,10 @@ export type InputCheckboxProps = {
     onChange: (string, InputCheckboxProps, {value, event, props}) => void,
     //The value of the input
     value?: boolean,
-    //The placeholder for the element
-    placeholder?: string,
     //disables the input and prevents the user from entering any information
     disabled?: boolean,
     //Adds some error stylings to the input
     hasError?: boolean,
-    //center the text inside the input
-    textCenter?: boolean,
     focus?: boolean,
     innerRef?: any
 };
@@ -1029,15 +1024,15 @@ export type InputCheckboxProps = {
 
 ### InputDate
 
-[DESCRIPTION]
+A freeform text-input date picker, which lets the user type a date and provides them with feedback about the interpreted date from their input
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputDate value={startDate}
+           onChange={(newStartDate) => setStartDate(newStartDate)}
+           placeholder={'Start Date'}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1141,15 +1136,15 @@ export type InputGroupTextProps = {
 
 ### InputNumber
 
-[DESCRIPTION]
+The HTML input element, with a number type
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputNumber value={quantity}
+             onChange={(newValue) => setQuantity(newValue)}
+             placeholder={'Quantity'}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1180,15 +1175,28 @@ export type InputNumberProps = {
 
 ### InputRadio
 
-[DESCRIPTION]
+The HTML radio inputs grouped to one
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputRadio  value={selectedFruit}
+             onChange={(newValue) => setSelectedFruit(newValue)}
+             options={[
+                {
+                    text: 'Orange',
+                    value: 'orange'
+                },
+                {
+                    text: 'Apple',
+                    value: 'apple'
+                },
+                {
+                    text: 'Banana',
+                    value: 'banana'
+                }
+             ]}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1219,15 +1227,28 @@ export type InputRadioProps = {
 
 ### InputSelect
 
-[DESCRIPTION]
+The HTML select element
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputSelect value={selectedFruit}
+             onChange={(newValue) => setSelectedFruit(newValue)}
+             options={[
+                {
+                    text: 'Orange',
+                    value: 'orange'
+                },
+                {
+                    text: 'Apple',
+                    value: 'apple'
+                },
+                {
+                    text: 'Banana',
+                    value: 'banana'
+                }
+             ]}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1260,15 +1281,15 @@ export type InputSelectProps = {
 
 ### InputText
 
-[DESCRIPTION]
+The HTML input element, with flexible type value for simple text inputs
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputText value={firstName}
+           onChange={(newValue) => setFirstName(newValue)}
+           placeholder={'First Name'}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1412,15 +1433,24 @@ export type LabelProps = {
 
 ### LabelValue
 
-[DESCRIPTION]
+A labeled text value display for displaying a value and the label
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<LabelValue label={'Word Count'}
+            value={wordCount}/>
 ```
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+A valueLoading attribute can be used if you need to get data dynamically, and want to display a placeholder until the
+data is received
+
+```jsx
+<LabelValue label={'Articles Found'}
+            value={articleCount}
+            size={'sm'}
+            valueLoading={pageIsLoading}/>
+```
 
 #### Types
 ```typescript
@@ -1445,15 +1475,19 @@ export type LabelValueProps = {
 
 ### LineBreak
 
-[DESCRIPTION]
+A simple `hr` and `br` html tag wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<LineBreak/> //<hr>
 ```
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<LineBreak clear/> //<br>
+<LineBreak br/> //<br>
+<LineBreak blank/> //<br>
+```
 
 #### Types
 ```typescript
@@ -1474,15 +1508,15 @@ export type LineBreakProps = {
 
 ### Link
 
-[DESCRIPTION]
+An `a` wrapper, utilizing an onclick instead of an href value
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Link onClick={() => Router.push('/dashboard')}>
+    Dashboard
+</Link>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1504,15 +1538,17 @@ export type LinkProps = {
 
 ### ListGroup
 
-[DESCRIPTION]
+A Wrapper of the Bootstrap component [List Group](https://getbootstrap.com/docs/5.1/components/list-group/)
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<ListGroup>
+    <ListGroupItem>Blackberries</ListGroupItem>
+    <ListGroupItem>Blueberries</ListGroupItem>
+    <ListGroupItem>Raspberries</ListGroupItem>
+</ListGroup>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1528,15 +1564,17 @@ export type ListGroupProps = {
 
 ### ListGroupItem
 
-[DESCRIPTION]
+A Wrapper of the Bootstrap component [List Group](https://getbootstrap.com/docs/5.1/components/list-group/)
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<ListGroup>
+    <ListGroupItem>Blackberries</ListGroupItem>
+    <ListGroupItem>Blueberries</ListGroupItem>
+    <ListGroupItem>Raspberries</ListGroupItem>
+</ListGroup>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1555,15 +1593,17 @@ export type ListGroupItemProps = {
 
 ### ListItem
 
-[DESCRIPTION]
+A simple wrapper for the HTML element li
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<UnorderedList>
+    <ListItem>Apples</ListItem>
+    <ListItem>Bananas</ListItem>
+    <ListItem>Oranges</ListItem>
+</UnorderedList>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1580,12 +1620,12 @@ export type ListItemProps = {
 
 ### LoadingSpinner
 
-[DESCRIPTION]
+A simple loading spinner image
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<LoadingSpinner speed={'slow'}/>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
@@ -1604,15 +1644,13 @@ export type LoadingSpinnerProps = {
 
 ### Main
 
-[DESCRIPTION]
+A simple wrapper for the HTML element main
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Main>...</Main>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1870,15 +1908,18 @@ export type ModalHeaderProps = {
 
 ### OrderedList
 
-[DESCRIPTION]
+A simple wrapper for the `ol` html element
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<OrderedList>
+	<ListItem>Spring</ListItem>
+	<ListItem>Summer</ListItem>
+	<ListItem>Fall</ListItem>
+	<ListItem>Winter</ListItem>
+</OrderedList>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -1894,15 +1935,21 @@ export type OrderedListProps = {
 
 ### Paragraph
 
-[DESCRIPTION]
+A simple wrapper of the HTML element p
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Paragraph>
+    Welcome, {user.firstName}!
+</Paragraph>
 ```
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<Paragraph textCenter>
+    Welcome, {user.firstName}!
+</Paragraph>
+```
 
 #### Types
 ```typescript
@@ -1915,6 +1962,9 @@ export type ParagraphProps = {
     textCenter?: boolean,
     textLeft?: boolean,
     textRight?: boolean,
+    bold?: boolean,
+    italic?: boolean,
+    underline?: boolean,
     //A simple additional styling option to quickly format the text as a certain type
     type?: string,
     onClick?: (props, event) => void
@@ -1951,15 +2001,15 @@ export type PlaceholderProps = {
 
 ### ProgressBar
 
-[DESCRIPTION]
+The progress-bar progress indicator
 
 #### Usage
 
-```jsx
-[DETAILS]
-```
+The progress attribute "value" is a value from 0 to 100
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<ProgressBar value={60}/>
+```
 
 #### Types
 ```typescript
@@ -1980,15 +2030,17 @@ export type ProgressBarProps = {
 
 ### ProgressBarContainer
 
-[DESCRIPTION]
+The progress-bar container.
+
+This component is used as a piece of the "ProgressBar" smart component. Use that instead, unless you need customized functionality.
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<ProgressBarContainer>
+    <ProgressBarProgress value={45}/>
+</ProgressBarContainer>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript
@@ -2168,15 +2220,23 @@ export type ShowProps = {
 
 ### SidebarMainContainer
 
-[DESCRIPTION]
+A sidebar container sister-component, which is set to the right to display the main content in a sidebar mode 
 
 #### Usage
 
-```jsx
-[DETAILS]
-```
+The Container wrapper with mode='sidebar' is necessary to make the sidebar container work
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<Container mode={'sidebar'}>
+    <SidebarSideContainer>
+        ...
+    </SidebarSideContainer>
+    
+    <SidebarMainContainer>
+        ...
+    </SidebarMainContainer>
+</Container>
+```
 
 #### Types
 ```typescript
@@ -2191,15 +2251,23 @@ export type SidebarMainContainerProps = ContainerProps & {
 
 ### SidebarSideContainer
 
-[DESCRIPTION]
+A sidebar container sister-component, which is set to the right to display the main content in a sidebar mode
 
 #### Usage
 
-```jsx
-[DETAILS]
-```
+The Container wrapper with mode='sidebar' is necessary to make the sidebar container work
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<Container mode={'sidebar'}>
+    <SidebarSideContainer>
+        ...
+    </SidebarSideContainer>
+    
+    <SidebarMainContainer>
+        ...
+    </SidebarMainContainer>
+</Container>
+```
 
 #### Types
 ```typescript
@@ -2474,7 +2542,7 @@ export type TableHeadProps = {
 			<TableHeader>Age</TableHeader>
 		</TableRow>
 	</TableHead>
-    
+
 	<TableBody>
 		<TableRow>
 			<TableHeader>{user.user_id}</TableHeader>
@@ -2544,15 +2612,26 @@ export type TableRowProps = {
 
 ### TabNav
 
-[DESCRIPTION]
+A tab navigation menu to display different views
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<TabNav views={[
+	{
+                id: 'summary',
+                name: 'Summary',
+                children: (...),
+                onOpen: (previousView) => {...}
+        },
+        {
+                id: 'friends',
+                name: 'Friends',
+                children: (...)
+        }
+    ]} 
+        activeViewID={selectedView}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
 
 #### Types
 ```typescript

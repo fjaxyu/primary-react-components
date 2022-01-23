@@ -1,14 +1,22 @@
 import * as React from 'react';
 
-import {Option as InputSelectOption} from '../InputSelect';
-import {Option as InputRadioOption} from '../InputRadio';
+import {InputSelectOption} from '../InputSelect/types';
+import {InputRadioOption} from '../InputRadio/types';
+
+export type InputOptionList = InputSelectOption[] | InputRadioOption[];
 
 export type InputProps = {
     onChange: (value: string) => void,
-    type: string,
+    type: 'text' | 'password' | 'email' | 'phone' |
+        'textarea' |
+        'checkbox' |
+        'select' |
+        'radio' |
+        'number' |
+        'date',
     value: string | number | Date | boolean,
 
-    options?: InputSelectOption[] | InputRadioOption[],
+    options?: InputOptionList,
     onEnter?: (value: string) => void,
     onCommandEnter?: (value: string) => void,
     autocomplete?: string,
