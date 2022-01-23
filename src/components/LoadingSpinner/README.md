@@ -1,9 +1,9 @@
-[DESCRIPTION]
+A simple loading spinner image
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<LoadingSpinner speed={'slow'}/>
 ```
 
 [//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

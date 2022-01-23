@@ -48,6 +48,18 @@ function getClassNames(props) {
         classNames.push('text-right');
     }
 
+    if (props.bold) {
+        classNames.push('text-bold');
+    }
+
+    if (props.italic) {
+        classNames.push('text-italic');
+    }
+
+    if (props.underline) {
+        classNames.push('text-underline');
+    }
+
     if (props.className) {
         classNames.push(props.className);
     }

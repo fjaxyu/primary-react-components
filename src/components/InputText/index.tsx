@@ -15,7 +15,7 @@ const CONSTANTS = {
 //===----=---=-=--=--===--=-===----=---=-=--=--===--=-===----=---=-=--=--===--=-//
 
 
-export default function Index(props: InputTextProps) {
+export default function InputText(props: InputTextProps) {
     const classes = getClasses(props);
     const type = getType(props);
 

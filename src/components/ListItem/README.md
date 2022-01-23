@@ -1,9 +1,11 @@
-[DESCRIPTION]
+A simple wrapper for the HTML element li
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<UnorderedList>
+    <ListItem>Apples</ListItem>
+    <ListItem>Bananas</ListItem>
+    <ListItem>Oranges</ListItem>
+</UnorderedList>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

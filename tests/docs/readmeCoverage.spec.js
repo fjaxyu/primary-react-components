@@ -61,7 +61,7 @@ describe('all components', () => {
 
 
 
-			it('should all have a type file', async (done) => {
+			it('should all have a type file', async () => {
 				try {
 					let typeFiles;
 					typeFiles = await Promise.all(getComponentNameList().map((componentName) => {
@@ -83,13 +83,13 @@ describe('all components', () => {
 					if (componentsWithoutATypeFile.length > 0) {
 						componentsWithoutATypeFile.forEach((componentName) => {
 							console.error(componentName + ' needs a types.ts file');
-						})
+						});
 					}
 
 					expect(componentsWithoutATypeFile).property('length').to.equal(0);
-					done();
+					return Promise.resolve();
 				} catch (error) {
-					done(error);
+					return Promise.reject(error);
 				}
 			});
 		});

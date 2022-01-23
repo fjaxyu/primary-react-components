@@ -1,9 +1,22 @@
-[DESCRIPTION]
+The HTML radio inputs grouped to one
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputRadio  value={selectedFruit}
+             onChange={(newValue) => setSelectedFruit(newValue)}
+             options={[
+                {
+                    text: 'Orange',
+                    value: 'orange'
+                },
+                {
+                    text: 'Apple',
+                    value: 'apple'
+                },
+                {
+                    text: 'Banana',
+                    value: 'banana'
+                }
+             ]}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

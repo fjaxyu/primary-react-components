@@ -1,9 +1,20 @@
-[DESCRIPTION]
+A tab navigation menu to display different views
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<TabNav views={[
+	{
+                id: 'summary',
+                name: 'Summary',
+                children: (...),
+                onOpen: (previousView) => {...}
+        },
+        {
+                id: 'friends',
+                name: 'Friends',
+                children: (...)
+        }
+    ]} 
+        activeViewID={selectedView}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

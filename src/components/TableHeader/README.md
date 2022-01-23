@@ -11,7 +11,7 @@
 			<TableHeader>Age</TableHeader>
 		</TableRow>
 	</TableHead>
-    
+
 	<TableBody>
 		<TableRow>
 			<TableHeader>{user.user_id}</TableHeader>

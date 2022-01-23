@@ -1,9 +1,11 @@
-[DESCRIPTION]
+A Wrapper of the Bootstrap component [List Group](https://getbootstrap.com/docs/5.1/components/list-group/)
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<ListGroup>
+    <ListGroupItem>Blackberries</ListGroupItem>
+    <ListGroupItem>Blueberries</ListGroupItem>
+    <ListGroupItem>Raspberries</ListGroupItem>
+</ListGroup>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

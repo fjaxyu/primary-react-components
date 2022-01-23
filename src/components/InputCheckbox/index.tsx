@@ -43,9 +43,5 @@ function getClasses(props) {
         classNames.push('has-error');
     }
 
-    if (props.textCenter === true) {
-        classNames.push('text-center');
-    }
-
     return classNames.join(' ');
 }

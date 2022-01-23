@@ -1,9 +1,9 @@
-[DESCRIPTION]
+The HTML input element, with flexible type value for simple text inputs
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputText value={firstName}
+           onChange={(newValue) => setFirstName(newValue)}
+           placeholder={'First Name'}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

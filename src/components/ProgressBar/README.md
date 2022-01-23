@@ -1,9 +1,9 @@
-[DESCRIPTION]
+The progress-bar progress indicator
 
 #### Usage
 
-```jsx
-[DETAILS]
-```
+The progress attribute "value" is a value from 0 to 100
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<ProgressBar value={60}/>
+```

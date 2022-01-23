@@ -1,9 +1,9 @@
-[DESCRIPTION]
+A freeform text-input date picker, which lets the user type a date and provides them with feedback about the interpreted date from their input
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputDate value={startDate}
+           onChange={(newStartDate) => setStartDate(newStartDate)}
+           placeholder={'Start Date'}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

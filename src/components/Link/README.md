@@ -1,9 +1,9 @@
-[DESCRIPTION]
+An `a` wrapper, utilizing an onclick instead of an href value
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Link onClick={() => Router.push('/dashboard')}>
+    Dashboard
+</Link>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

@@ -1,9 +1,15 @@
-[DESCRIPTION]
+A simple wrapper of the HTML element p
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Paragraph>
+    Welcome, {user.firstName}!
+</Paragraph>
 ```
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<Paragraph textCenter>
+    Welcome, {user.firstName}!
+</Paragraph>
+```

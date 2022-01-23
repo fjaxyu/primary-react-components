@@ -1,9 +1,17 @@
-[DESCRIPTION]
+A sidebar container sister-component, which is set to the right to display the main content in a sidebar mode
 
 #### Usage
 
-```jsx
-[DETAILS]
-```
+The Container wrapper with mode='sidebar' is necessary to make the sidebar container work
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<Container mode={'sidebar'}>
+    <SidebarSideContainer>
+        ...
+    </SidebarSideContainer>
+    
+    <SidebarMainContainer>
+        ...
+    </SidebarMainContainer>
+</Container>
+```

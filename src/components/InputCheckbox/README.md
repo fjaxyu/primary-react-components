@@ -1,9 +1,8 @@
-[DESCRIPTION]
+The HTML radio inputs grouped to one
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputCheckbox value={termsAreAgreed}
+               onChange={(newValue) => setTermsAreAgreed(newValue)}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

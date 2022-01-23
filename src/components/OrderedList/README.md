@@ -1,9 +1,12 @@
-[DESCRIPTION]
+A simple wrapper for the `ol` html element
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<OrderedList>
+	<ListItem>Spring</ListItem>
+	<ListItem>Summer</ListItem>
+	<ListItem>Fall</ListItem>
+	<ListItem>Winter</ListItem>
+</OrderedList>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

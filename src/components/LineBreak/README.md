@@ -1,9 +1,13 @@
-[DESCRIPTION]
+A simple `hr` and `br` html tag wrapper
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<LineBreak/> //<hr>
 ```
 
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
+```jsx
+<LineBreak clear/> //<br>
+<LineBreak br/> //<br>
+<LineBreak blank/> //<br>
+```

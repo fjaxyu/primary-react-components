@@ -1,9 +1,7 @@
-[DESCRIPTION]
+A simple wrapper for the HTML element main
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Main>...</Main>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
