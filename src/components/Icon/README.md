@@ -1,9 +1,7 @@
-[DESCRIPTION]
+An Icon element using the the [Font Awesome icon system](https://fontawesome.com)
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<Icon icon={'person'}>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

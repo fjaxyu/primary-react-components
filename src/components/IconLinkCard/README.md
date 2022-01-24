@@ -1,9 +1,9 @@
-[DESCRIPTION]
+A clickable icon link card component with a title
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<IconLinkCard icon={'person'}
+              text={'Account'}
+              backgroundColor={'tomato'}/>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

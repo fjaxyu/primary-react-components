@@ -1,9 +1,10 @@
-[DESCRIPTION]
+A list of clickable icon link cards
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<IconLinkCardList options={[
+	{icon: 'person', text: 'Account', backgroundColor: 'tomato'},
+	{icon: 'gears', text: 'Settings', backgroundColor: 'blue'}
+]}/>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)

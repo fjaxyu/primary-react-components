@@ -1,9 +1,12 @@
-[DESCRIPTION]
+A wrapper for the [Bootstrap Input Group](https://getbootstrap.com/docs/5.1/forms/input-group/)
 
 #### Usage
 
 ```jsx
-[DETAILS]
+<InputGroup>
+	<InputGroupItem type={'text'}>@</InputGroupItem>
+	<Input type={'text'}
+		   value={username}
+		   onChange={(newUsername) => setUsername(newUsername)}/>
+</InputGroup>
 ```
-
-[//]: # (![image]&#40;/src/components/Box/images/example.png&#41;)
